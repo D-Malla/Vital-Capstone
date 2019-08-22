@@ -1,0 +1,114 @@
+html {box-sizing:border-box;}
+*, *::before, *::after {box-sizing:inherit;}
+
+/* GENERAL STYLING */
+a {
+  text-decoration: none;
+}
+
+
+/* HOME STYLING */
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* HOME HEADER STYLING */
+#homeHeaderContainer {
+  background: pink;
+  display: flex;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#homeHeaderContainer .logoDiv {
+  padding-left: 20px;
+  width: 18%
+}
+
+#homeHeaderContainer .catchphraseDiv {
+  width: 50%;
+  text-align: center;
+}
+
+#homeHeaderContainer .userButtonDiv {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 12px;
+  width: 22%;
+}
+
+#homeHeaderContainer .userButtonDiv .userButtons {
+  border-radius: 5px;
+  height: 50px;
+  width: 125px;
+}
+
+/* HOME BODY STYLING */
+#homeBodyContainer {
+  background: purple;
+  height: 800px;
+}
+
+/* HOME BODY IMAGE STYLING */
+#homeBodyContainer .homeImage {
+  background-image: url('../assets/homebg.jpeg');
+  height:300px;
+  margin-top: 75px;
+}
+/* HOME BODY CLASS SELECTOR STYLING */
+#homeBodyContainer .classSelectorDiv {
+  display: flex;
+  height: 200px;
+  padding: 0 65px;
+  
+}
+
+#homeBodyContainer .classSelectorDiv .classSelector {
+  border-right: 1px solid gray;
+  text-align: center;
+  margin-top: 100px;
+  height: 150px;
+  width: 33.3%;
+}
+
+/* HOME FOOTER STYLING */
+#homeFooterContainer {
+  background: yellow;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+
+#homeFooterContainer .footerLogoDiv{
+  display: flex;
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 10%
+}
+
+#homeFooterContainer .footerInfoDiv {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 25px;
+  width: 50%
+}
+
+#homeFooterContainer .footerSocialDiv {
+  display: flex;
+  padding-top: 25px;
+  text-align: center;
+  width: 15%
+}
+
+#homeFooterContainer .footerSocialDiv p {
+  background: green;
+  height: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 10px;
+  width: 30px;
+}
