@@ -22,6 +22,7 @@ a {
   top: 0;
   justify-content: space-between;
   width: 100%;
+  z-index: 2;;
 }
 
 #homeHeaderContainer .logoDiv {
@@ -55,10 +56,22 @@ a {
 
 /* HOME BODY IMAGE STYLING */
 #homeBodyContainer .homeImage {
-  background-image: url('../assets/homebg.jpeg');
-  height:300px;
+  background-image: url('../assets/homebg3.jpg');
+  background-size: cover;
+  background-position-y: -500px;
+  background-repeat: no-repeat;
+  height: 300px;
   margin-top: 75px;
 }
+
+#homeBodyContainer .imgOverlay {
+  background: rgba(98, 146, 158, .7);
+  height: 300px;
+  position: absolute;
+  top: 75px;
+  width: 100%;
+}
+
 /* HOME BODY CLASS SELECTOR STYLING */
 #homeBodyContainer .classSelectorDiv {
   display: flex;
@@ -109,6 +122,6 @@ a {
   height: 30px;
   margin-left: 5px;
   margin-right: 5px;
-  padding-top: 10px;
+  padding-top: 7px;
   width: 30px;
 }
