@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import store from '../store'
 
 import Home from './Home/Home'
+import Lessons from './LessonSelector/Lessons'
+import Lesson from './LessonPage/Lesson'
 
 export default props => {
   const [name, setName] = useState('')
@@ -17,7 +19,9 @@ export default props => {
   return (
     <Provider store={store}>
       <Router>
-        <Route path='/' component={Home} />
+        <Route exact path='/' component={Home} />
+        <Route path='/lessons' component={Lessons} />
+        <Route path='/lesson' component={Lesson} />
       </Router>
     </Provider>
   )

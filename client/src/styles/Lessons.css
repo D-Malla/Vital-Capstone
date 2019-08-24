@@ -1,0 +1,102 @@
+html {box-sizing:border-box;}
+*, *::before, *::after {box-sizing:inherit;}
+
+/* GENERAL STYLING */
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+/* LESSONS STYLING */
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LESSONS HEADER STYLING */
+#lessonsHeaderContainer {
+  background: #022F40;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 2;;
+}
+
+#lessonsHeaderContainer .logoDiv {
+  padding-left: 20px;
+  width: 18%
+}
+
+#lessonsHeaderContainer .catchphraseDiv {
+  width: 50%;
+  text-align: center;
+}
+
+#lessonsHeaderContainer .userButtonDiv {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 12px;
+  width: 22%;
+}
+
+#lessonsHeaderContainer .userButtonDiv .userButtons {
+  border-radius: 5px;
+  height: 50px;
+  outline: none;
+  width: 125px;
+}
+
+/* LESSONS BODY STYLING */
+#lessonsBodyContainer {
+  background: #C6C5B9;
+  display: flex;
+  height: 500px;
+}
+
+#lessonsBodyContainer .lessonsBody {
+  background: #62929E;
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* LESSONS FOOTER STYLING */
+#lessonsFooterContainer {
+  background: #022F40;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+}
+
+#lessonsFooterContainer .footerLogoDiv{
+  display: flex;
+  padding-top: 0px;
+  padding-left: 10px;
+  width: 10%
+}
+
+#lessonsFooterContainer .footerInfoDiv {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+  width: 50%
+}
+
+#lessonsFooterContainer .footerSocialDiv {
+  display: flex;
+  padding-top: 10px;
+  text-align: center;
+  width: 15%
+}
+
+#lessonsFooterContainer .footerSocialDiv svg {
+  height: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 15px;
+  width: 30px;
+}
