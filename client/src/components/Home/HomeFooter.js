@@ -1,5 +1,11 @@
 import React from 'react'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin} from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+
 export default props => {
   return (
     <footer id='homeFooterContainer'>
@@ -8,14 +14,14 @@ export default props => {
       </div>
       <div className='footerInfoDiv'>
         <p>© Vital 2019</p>
-        <p>Privacy Policy</p>
-        <p> Terms of Use</p>
+        <a href='#'><p>Privacy Policy</p></a>
+        <a href='#'><p>Terms of Use</p></a>
       </div>
       <div className='footerSocialDiv'>
-        <p>I</p>
-        <p>F</p>
-        <p>L</p>
-        <p>T</p>
+      <a href='#'><FontAwesomeIcon icon={faInstagram}/></a>
+      <a href='#'><FontAwesomeIcon icon={faFacebook}/></a>
+      <a href='#'><FontAwesomeIcon icon={faLinkedin}/></a>
+      <a href='#'><FontAwesomeIcon icon={faTwitter}/></a>
       </div>
     </footer>
   )
