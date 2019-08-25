@@ -3,6 +3,7 @@ html {box-sizing:border-box;}
 
 /* GENERAL STYLING */
 a {
+  color: white;
   text-decoration: none;
 }
 
