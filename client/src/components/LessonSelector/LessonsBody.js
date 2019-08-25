@@ -5,9 +5,14 @@ export default props => {
   return (
     <div id='lessonsBodyContainer'>
       <div className='lessonsBody'>
-          blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
-        <button type='button'>PREV</button>
-        <button type='button'>CONTINUE</button>
+          <ul>
+            <li><Link to='/lesson'>Blah</Link></li>
+            <li><Link to='/lesson'>Blah</Link></li>
+            <li><Link to='/lesson'>Blah</Link></li>
+            <li><Link to='/lesson'>Blah</Link></li>
+            <li><Link to='/lesson'>Blah</Link></li>
+            <li><Link to='/lesson'>Blah</Link></li>
+          </ul>
       </div>
     </div>
   )

@@ -16,6 +16,10 @@ export default props => {
         <article>
           blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
         </article>
+        <div>
+          <button type='button'>PREV</button>
+          <button type='button'>CONTINUE</button>
+        </div>
       </div>
     </div>
   )
