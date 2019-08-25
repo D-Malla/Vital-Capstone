@@ -16,7 +16,7 @@ export function lessonsTitle() {
   axios.get("/api/lessons_title").then(resp => {
     store.dispatch({
       type: "LESSONS_TITLE",
-      payload: resp.data
+      payload: resp.data.lessons_title
     });
   });
 }

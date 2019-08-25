@@ -18,30 +18,16 @@ export default props => {
       </div>
 
       <div className="classSelectorDiv">
-        {console.log(title.lessons_title)}
-        {/* {title.lessons_title.map(item => (
-          <div>{item}</div>
-        ))} */}
-        {/* // <div>
-          //   <div className="classSelector">
-          //     <Link to="/lessons" className="link">
-          //       <h3>{item.id}</h3>
-          //       <p>THE BASIC STRUCTURE OF A WEBPAGE</p>
-          //     </Link>
-          //   </div>
-          //   <div className="classSelector">
-          //     <Link to="/lessons" className="link">
-          //       <h3>CSS</h3>
-          //       <p>THE PRESENTATION, FORMATTING, AND LAYOUT</p>
-          //     </Link>
-          //   </div>
-          //   <div className="classSelector">
-          //     <Link to="/lessons" className="link">
-          //       <h3>JAVASCRIPT</h3>
-          //       <p>THE FUNCTIONALITY AND CONTROL OF ELEMENTS</p>
-          //     </Link>
-          //   </div>
-          // </div> */}
+        {console.log(title)}
+
+        {title.map(item => (
+          <div key={item.lesson} className="classSelector">
+            <Link className="link" to={"/lessons/" + item.slug}>
+              <h3> {item.lesson}</h3>
+              <p>{item.lesson_description}</p>
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   );
