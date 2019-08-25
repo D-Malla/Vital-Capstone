@@ -1,9 +1,10 @@
-const router = require('express').Router()
+const router = require("express").Router();
+const conn = require("../../db");
 
-router.get('/greeting', (req, res, next) => {
+router.get("/greeting", (req, res, next) => {
   res.json({
-    "greeting": "Hello World!"
-  })
-})
+    greeting: "Hello World!"
+  });
+});
 
-module.exports = router
+module.exports = router;
