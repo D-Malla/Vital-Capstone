@@ -20,3 +20,12 @@ export function lessonsTitle() {
     });
   });
 }
+export function matchLessons(slug) {
+  axios.get("/api/lesson_title/" + slug).then(resp => {
+    console.log(resp.data);
+    store.dispatch({
+      type: "LESSONS",
+      payload: resp.data
+    });
+  });
+}

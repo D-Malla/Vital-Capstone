@@ -20,4 +20,13 @@ router.get("/lessons_title", (req, res, next) => {
   });
 });
 
+router.get("/lesson_title/:slug", (req, res, next) => {
+  const slug = req.params.slug;
+  const sql = `SELECT p.slug`;
+  conn.query(sql, [slug], (err, results, fields) => {
+    console.log(results);
+    res.json(results);
+  });
+});
+
 module.exports = router;
