@@ -1,6 +1,5 @@
-import store from '../store'
-import axios from 'axios'
-import io from 'socket.io-client'
+import store from "../store";
+import axios from "axios";
 
 // MUST CHANGE localhost to IP ADDRESS
 // const socket = io.connect('http://localhost:8000')
@@ -13,11 +12,11 @@ import io from 'socket.io-client'
 //   socket.emit('name', name)
 // }
 
-// export function greet() {
-//   axios.get('/api/greeting').then(resp => {
-//     store.dispatch({
-//       type: 'GREETING',
-//       payload: resp.data.greeting
-//     })
-//   })
-// }
+export function cssQuestion() {
+  axios.get("/api/css_question").then(resp => {
+    store.dispatch({
+      type: "CSS_QUESTION",
+      payload: resp.data.css_question
+    });
+  });
+}

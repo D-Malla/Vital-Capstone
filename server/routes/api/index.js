@@ -1,9 +1,11 @@
 const router = require("express").Router();
 const conn = require("../../db");
 
-router.get("/greeting", (req, res, next) => {
-  res.json({
-    greeting: "Hello World!"
+router.get("/css_question", (req, res, next) => {
+  const sql = `SELECT * FROM css_question`;
+
+  conn.query(sql, (err, results, fields) => {
+    res.json(results);
   });
 });
 
