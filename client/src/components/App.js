@@ -7,6 +7,8 @@ import store from '../store'
 import HtmlPage from './lessons/HTML'
 
 import Home from './Home/Home'
+import Lessons from './LessonSelector/Lessons'
+import Lesson from './LessonPage/Lesson'
 
 export default props => {
   const [name, setName] = useState('')
@@ -18,8 +20,9 @@ export default props => {
   return (
     <Provider store={store}>
       <Router>
-        <Route path='/' exact component={Home} />
-        <Route path='/lessons/html' component={HtmlPage} />
+        <Route exact path='/' component={Home} />
+        <Route path='/lessons' component={Lessons} />
+        <Route path='/lesson' component={Lesson} />
       </Router>
     </Provider>
   )

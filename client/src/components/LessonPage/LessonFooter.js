@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../styles/Lesson.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -8,7 +9,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 export default props => {
   return (
-    <footer id='homeFooterContainer'>
+    <footer id='lessonFooterContainer'>
       <div className='footerLogoDiv'>
         <h1>Vital</h1>
       </div>

@@ -1,0 +1,107 @@
+html {box-sizing:border-box;}
+*, *::before, *::after {box-sizing:inherit;}
+
+/* GENERAL STYLING */
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+/* LESSON STYLING */
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LESSON HEADER STYLING */
+#lessonHeaderContainer {
+  background: #022F40;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 2;;
+}
+
+#lessonHeaderContainer .logoDiv {
+  padding-left: 20px;
+  width: 18%
+}
+
+#lessonHeaderContainer .catchphraseDiv {
+  width: 50%;
+  text-align: center;
+}
+
+#lessonHeaderContainer .userButtonDiv {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 12px;
+  width: 22%;
+}
+
+#lessonHeaderContainer .userButtonDiv .userButtons {
+  border-radius: 5px;
+  height: 50px;
+  outline: none;
+  width: 125px;
+}
+
+/* LESSON ASIDE STYLING */
+#lessonBodyContainer .lessonAside {
+  background: #62929E;
+  height: 500px;
+  width: 500px;
+}
+
+#lessonBodyContainer .lessonAside ul li {
+  font-size: 30px;
+  list-style: none;
+}
+
+/* LESSON BODY STYLING */
+#lessonBodyContainer {
+  background: #C6C5B9;
+  display: flex;
+}
+
+/* LESSON FOOTER STYLING */
+#lessonFooterContainer {
+  background: #022F40;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+}
+
+#lessonFooterContainer .footerLogoDiv{
+  display: flex;
+  padding-top: 0px;
+  padding-left: 10px;
+  width: 10%
+}
+
+#lessonFooterContainer .footerInfoDiv {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15px;
+  width: 50%
+}
+
+#lessonFooterContainer .footerSocialDiv {
+  display: flex;
+  padding-top: 10px;
+  text-align: center;
+  width: 15%
+}
+
+#lessonFooterContainer .footerSocialDiv svg {
+  height: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 15px;
+  width: 30px;
+}
