@@ -4,6 +4,7 @@ import '../styles/Home.css'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import store from '../store'
+import HtmlPage from './lessons/HTML'
 
 import Home from './Home/Home'
 import Lessons from './LessonSelector/Lessons'
