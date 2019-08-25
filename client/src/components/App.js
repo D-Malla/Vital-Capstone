@@ -4,6 +4,7 @@ import '../styles/Home.css'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import store from '../store'
+import HtmlPage from './lessons/HTML'
 
 import Home from './Home/Home'
 
@@ -17,7 +18,8 @@ export default props => {
   return (
     <Provider store={store}>
       <Router>
-        <Route path='/' component={Home} />
+        <Route path='/' exact component={Home} />
+        <Route path='/lessons/html' component={HtmlPage} />
       </Router>
     </Provider>
   )
