@@ -12,11 +12,11 @@ import axios from "axios";
 //   socket.emit('name', name)
 // }
 
-export function cssQuestion() {
-  axios.get("/api/css_question").then(resp => {
+export function lessonsTitle() {
+  axios.get("/api/lessons_title").then(resp => {
     store.dispatch({
-      type: "CSS_QUESTION",
-      payload: resp.data.css_question
+      type: "LESSONS_TITLE",
+      payload: resp.data
     });
   });
 }

@@ -1,11 +1,12 @@
 const initialState = {
-  css_question: ""
+  lessons_title: []
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case "CSS_QUESTION":
-      return { ...state, CSS_QUESTION: action.payload };
+    case "LESSONS_TITLE":
+      return { ...state, lessons_title: action.payload };
+
     default:
       return state;
   }
