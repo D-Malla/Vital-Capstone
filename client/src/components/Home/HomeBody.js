@@ -22,13 +22,41 @@ export default props => {
 
         {title.map(item => (
           <div key={item.lesson} className="classSelector">
-            <Link className="link" to={"/lessons/" + item.slug}>
+            <div>
+              {/* <Link to={"/lessons/" + item.slug} className="link"> */}
               <h3> {item.lesson}</h3>
+              {/* </Link> */}
               <p>{item.lesson_description}</p>
-            </Link>
+            </div>
+            <div className="sub-lessons">
+              {item.subcat.map(sub => (
+                <div key={sub.id} className="indi-lessons">
+                  <Link to={"/lesson/" + sub.slug}>{sub.lesson}</Link>
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
     </div>
   );
 };
+{
+  /* {title.map(item => (
+          <div key={item.lesson} className="classSelector">
+            <h3> {item.lesson}</h3>
+            <p>{item.lesson_description}</p>
+            {item.subcat.map(sub => (
+              <div>
+                <Link
+                  className="link"
+                  to={"/lessons/" + sub.slug}
+                  key={sub.lesson}
+                >
+                  {sub.lesson}
+                </Link>
+              </div>
+            ))}
+          </div>
+        ))} */
+}

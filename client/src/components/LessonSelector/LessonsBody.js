@@ -12,13 +12,13 @@ export default props => {
   return (
     <div id="lessonsBodyContainer">
       <div className="lessonsBody">
-        {title.map(item => (
+        {/* {title.map(item => (
           <div>
             {item.subcat.map(sub => (
               <div>{sub.lesson}</div>
             ))}
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );
