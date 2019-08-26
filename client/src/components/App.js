@@ -20,9 +20,11 @@ export default props => {
   return (
     <Provider store={store}>
       <Router>
-        <Route exact path="/" component={Home} />
-        <Route path="/lessons/:slug" component={Lessons} />
-        <Route path="/lesson/:slug" component={Lesson} />
+        <div>
+          <Route exact path="/" component={Home} />
+          <Route path="/lessons/:slug" component={Lessons} />
+          <Route path="/lesson/:lesson/:id" component={Lesson} />
+        </div>
       </Router>
     </Provider>
   );

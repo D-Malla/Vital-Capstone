@@ -9,6 +9,8 @@ export default props => {
     lessonsTitle();
   }, []);
 
+  // markdown, markdown renderer use that to store content
+
   return (
     <div id="homeBodyContainer">
       <div className="homeImage"></div>
@@ -31,7 +33,9 @@ export default props => {
             <div className="sub-lessons">
               {item.subcat.map(sub => (
                 <div key={sub.id} className="indi-lessons">
-                  <Link to={"/lesson/" + sub.slug}>{sub.lesson}</Link>
+                  <Link to={"/lesson/" + sub.lesson + "/" + sub.parent_id}>
+                    {sub.lesson}
+                  </Link>
                 </div>
               ))}
             </div>

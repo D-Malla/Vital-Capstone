@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/Lesson.css";
+import { matchLessons } from "../../actions/vital.actions";
 
 export default props => {
+  const lesson = props.props.match.params.lesson;
+
+  useEffect(() => matchLessons(lesson), [lesson]);
   return (
     <header id="lessonHeaderContainer">
-      <Link to="./">
+      <Link to="/">
         <div className="logoDiv">
           <h1>Vital</h1>
         </div>
       </Link>
       <div className="catchphraseDiv">
-        <h1>Coding Made Simple!</h1>
+        <h1>{lesson}</h1>
       </div>
       <div className="userButtonDiv">
         <button className="userButtons" type="button">

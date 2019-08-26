@@ -29,3 +29,13 @@ export function matchLessons(slug) {
     });
   });
 }
+
+export function getLessonTitles(id) {
+  axios.get("/api/lessons_title/" + id).then(resp => {
+    console.log(resp.data);
+    store.dispatch({
+      type: "LIST_LESSONS",
+      payload: resp.data
+    });
+  });
+}
