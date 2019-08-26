@@ -1,28 +1,40 @@
-import React from 'react'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faFacebook } from '@fortawesome/free-brands-svg-icons'
-import { faLinkedin} from '@fortawesome/free-brands-svg-icons'
-import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import React from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 export default props => {
   return (
-    <footer id='homeFooterContainer'>
-      <div className='footerLogoDiv'>
+    <footer id="homeFooterContainer">
+      <div className="footerLogoDiv">
         <h1>Vital</h1>
       </div>
-      <div className='footerInfoDiv'>
+      <div className="footerInfoDiv">
         <p>© Vital 2019</p>
-        <a href='#'><p>Privacy Policy</p></a>
-        <a href='#'><p>Terms of Use</p></a>
+        <Link to="/">
+          <p>Privacy Policy</p>
+        </Link>
+        <Link to="/">
+          <p>Terms of Use</p>
+        </Link>
       </div>
-      <div className='footerSocialDiv'>
-      <a href='#'><FontAwesomeIcon icon={faInstagram}/></a>
-      <a href='#'><FontAwesomeIcon icon={faFacebook}/></a>
-      <a href='#'><FontAwesomeIcon icon={faLinkedin}/></a>
-      <a href='#'><FontAwesomeIcon icon={faTwitter}/></a>
+      <div className="footerSocialDiv">
+        <Link to="/">
+          <FontAwesomeIcon icon={faInstagram} />
+        </Link>
+        <Link to="/">
+          <FontAwesomeIcon icon={faFacebook} />
+        </Link>
+        <Link to="/">
+          <FontAwesomeIcon icon={faLinkedin} />
+        </Link>
+        <Link to="/">
+          <FontAwesomeIcon icon={faTwitter} />
+        </Link>
       </div>
     </footer>
-  )
-}
+  );
+};

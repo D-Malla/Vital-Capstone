@@ -12,11 +12,30 @@ import axios from "axios";
 //   socket.emit('name', name)
 // }
 
-export function cssQuestion() {
-  axios.get("/api/css_question").then(resp => {
+export function lessonsTitle() {
+  axios.get("/api/lessons_title").then(resp => {
     store.dispatch({
-      type: "CSS_QUESTION",
-      payload: resp.data.css_question
+      type: "LESSONS_TITLE",
+      payload: resp.data.lessons_title
+    });
+  });
+}
+export function matchLessons(slug) {
+  axios.get("/api/lesson_title/" + slug).then(resp => {
+    console.log(resp.data);
+    store.dispatch({
+      type: "LESSONS",
+      payload: resp.data
+    });
+  });
+}
+
+export function getLessonTitles(id) {
+  axios.get("/api/lessons_title/" + id).then(resp => {
+    console.log(resp.data);
+    store.dispatch({
+      type: "LIST_LESSONS",
+      payload: resp.data
     });
   });
 }
