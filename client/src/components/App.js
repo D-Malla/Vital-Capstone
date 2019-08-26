@@ -22,7 +22,7 @@ export default props => {
       <Router>
         <div>
           <Route exact path="/" component={Home} />
-          <Route path="/lessons/:slug" component={Lessons} />
+          <Route path="/lessons/:slug/:id" component={Lessons} />
           <Route path="/lesson/:lesson/:id" component={Lesson} />
         </div>
       </Router>

@@ -1,12 +1,6 @@
-html {
-  box-sizing: border-box;
-}
+html {box-sizing: border-box;}
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
+*,*::before,*::after {box-sizing: inherit;}
 
 /* GENERAL STYLING */
 a {
@@ -119,10 +113,10 @@ a:visited {
   width: 25%;
 }
 
-#homeBodyContainer .classSelectorDiv .classSelector:active {
+/* #homeBodyContainer .classSelectorDiv .classSelector:active {
   height: 195px;
   width: 24%;
-}
+} */
 
 .sub-lessons a:hover {
   color: #C6C5B9;
@@ -148,19 +142,15 @@ a:visited {
   background: #022F40;
   border-top-left-radius: 9px;
   border-top-right-radius: 9px;
-
   padding-top: 12px;
 }
 
 #homeBodyContainer .classSelectorDiv .classSelector p {
-
-  /* border-bottom-left-radius: 9px;
-  border-bottom-right-radius: 9px; */
   height: 70%;
   padding-top: 0px;
   font-size: 20px;
   margin-bottom: 10px;
-  border-bottom: 1px solid blue;
+  /* border-bottom: 1px solid blue; */
 }
 
 /* HOME FOOTER STYLING */

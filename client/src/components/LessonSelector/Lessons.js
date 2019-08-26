@@ -9,7 +9,7 @@ export default props => {
   return (
     <div id='container'>
       <LessonsHeader />
-      <LessonsBody />
+      <LessonsBody props={props}/>
       <LessonsFooter />
     </div>
   )

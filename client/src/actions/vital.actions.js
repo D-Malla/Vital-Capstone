@@ -25,7 +25,7 @@ export function matchLessons(slug) {
     console.log(resp.data);
     store.dispatch({
       type: "LESSONS",
-      payload: resp.data
+      payload: resp.data  
     });
   });
 }
