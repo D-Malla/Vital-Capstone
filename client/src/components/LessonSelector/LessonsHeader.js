@@ -1,7 +1,7 @@
-import React, { useEffect } from "react"
-import { Link } from "react-router-dom"
-import "../../styles/Lesson.css"
-import { lessonsTitle } from "../../actions/vital.actions"
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import "../../styles/Lesson.css";
+import { lessonsTitle } from "../../actions/vital.actions";
 
 export default props => {
   const lesson = props.props.match.params.slug;

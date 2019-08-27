@@ -18,6 +18,10 @@ a:visited {
   color: white;
 }
 
+.link-button {
+  background-color: black;
+}
+
 /* LESSON STYLING */
 #container {
   display: flex;
