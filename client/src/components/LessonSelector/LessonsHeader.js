@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react";
 import "../../styles/Lessons.css";
 import { Link } from "react-router-dom";
@@ -10,14 +11,26 @@ export default props => {
   useEffect(() => {
     lessonsTitle();
   }, []);
+=======
+import React, { useEffect } from "react"
+import { Link } from "react-router-dom"
+import "../../styles/Lesson.css"
+import { lessonsTitle } from "../../actions/vital.actions"
+
+export default props => {
+  const lesson = props.props.match.params.slug;
+
+  useEffect(() => lessonsTitle(), []);
+>>>>>>> aa79a119c84f25ba99dfce76d0d9c5673d05b0ee
   return (
-    <header id="lessonsHeaderContainer">
-      <div className="logoDiv">
-        <Link to="/">
+    <header id="lessonHeaderContainer">
+      <Link to="/">
+        <div className="logoDiv">
           <h1>Vital</h1>
-        </Link>
-      </div>
+        </div>
+      </Link>
       <div className="catchphraseDiv">
+<<<<<<< HEAD
         {/* {title.map(item => (
           <div key={item.lesson} className="classSelector">
             <div>
@@ -25,6 +38,9 @@ export default props => {
             </div>
           </div>
         ))} */}
+=======
+        <h1>{lesson}</h1>
+>>>>>>> aa79a119c84f25ba99dfce76d0d9c5673d05b0ee
       </div>
       <div className="userButtonDiv">
         <button className="userButtons" type="button">
