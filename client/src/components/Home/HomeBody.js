@@ -29,7 +29,9 @@ export default props => {
               <Link
                 to={"/lessons/" + item.lesson + "/" + item.id}
                 className="link"
-              ></Link>
+              >
+                <h3> {item.lesson}</h3>
+              </Link>
               <p>{item.lesson_description}</p>
             </div>
           </div>

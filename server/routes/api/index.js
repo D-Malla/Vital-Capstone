@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const conn = require("../../db");
 
-router.get("/lessons_title", (req, res, next) => {
+router.get("/lessons_title/", (req, res, next) => {
   const sql = `SELECT * FROM lessons_title`;
   let data = {
     title: "home"
