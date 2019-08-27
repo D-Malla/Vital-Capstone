@@ -1,5 +1,12 @@
-html {box-sizing:border-box;}
-*, *::before, *::after {box-sizing:inherit;}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 /* GENERAL STYLING */
 a {
@@ -9,6 +16,10 @@ a {
 
 a:visited {
   color: white;
+}
+
+.link-button {
+  background-color: black;
 }
 
 /* LESSONS STYLING */
@@ -24,7 +35,8 @@ a:visited {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  z-index: 2;;
+  z-index: 2;
+  ;
 }
 
 #lessonsHeaderContainer .logoDiv {
@@ -73,7 +85,7 @@ a:visited {
   height: 75px;
 }
 
-#lessonsFooterContainer .footerLogoDiv{
+#lessonsFooterContainer .footerLogoDiv {
   display: flex;
   padding-top: 0px;
   padding-left: 10px;
