@@ -33,15 +33,21 @@ a:visited {
   background: #022F40;
   color: white;
   display: flex;
+  height: 100px;
   justify-content: space-between;
   width: 100%;
   z-index: 2;
-  ;
 }
 
 #lessonsHeaderContainer .logoDiv {
   padding-left: 20px;
+  padding-top: 10px;
   width: 18%
+}
+
+#lessonsHeaderContainer .logoDiv img {
+  height: 75px;
+  width: 75px;  
 }
 
 #lessonsHeaderContainer .catchphraseDiv {
@@ -87,16 +93,21 @@ a:visited {
 
 #lessonsFooterContainer .footerLogoDiv {
   display: flex;
-  padding-top: 0px;
-  padding-left: 10px;
+  padding-top: 22px;
+  padding-left: 20px;
   width: 10%
+}
+
+#lessonsFooterContainer .footerLogoDiv img {
+  height: 30px;
+  width: 90px;
 }
 
 #lessonsFooterContainer .footerInfoDiv {
   display: flex;
   justify-content: space-around;
   padding-top: 15px;
-  width: 50%
+  width: 50%;
 }
 
 #lessonsFooterContainer .footerSocialDiv {

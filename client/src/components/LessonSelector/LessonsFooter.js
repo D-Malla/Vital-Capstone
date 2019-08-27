@@ -6,13 +6,15 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import Logo from '../../assets/Vital-name.png'
 
 export default props => {
   return (
     <footer id="lessonsFooterContainer">
       <div className="footerLogoDiv">
-        <h1>Vital</h1>
+        <img src={Logo} alt='Vital'/>
       </div>
+      
       <div className="footerInfoDiv">
         <p>© Vital 2019</p>
         <Link to="/">

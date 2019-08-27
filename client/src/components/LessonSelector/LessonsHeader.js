@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/Lesson.css";
 import { lessonsTitle } from "../../actions/vital.actions";
+import Img from  '../../assets/Vital.png'
 
 export default props => {
   const lesson = props.props.match.params.slug;
@@ -10,8 +11,8 @@ export default props => {
   return (
     <header id="lessonHeaderContainer">
       <Link to="/">
-        <div className="logoDiv">
-          <h1>Vital</h1>
+        <div className='logoDiv'>
+          <img src={Img} alt='Vital Logo'/>
         </div>
       </Link>
       <div className="catchphraseDiv">

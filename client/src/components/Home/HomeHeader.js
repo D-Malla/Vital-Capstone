@@ -1,10 +1,11 @@
 import React from 'react'
+import Img from  '../../assets/Vital.png'
 
 export default props => {
   return (
       <header  id='homeHeaderContainer'>
         <div className='logoDiv'>
-          <h1>Vital</h1>
+          <img src={Img} alt='Vital Logo'/>
         </div>
         <div className='catchphraseDiv'>
           <h1>Coding Made Simple!</h1>
