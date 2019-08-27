@@ -23,7 +23,7 @@ export default props => {
         <div>
           <Route exact path="/" component={Home} />
           <Route path="/lessons/:slug/:id" component={Lessons} />
-          <Route path="/lesson/:lesson/:id" component={Lesson} />
+          <Route path="/lesson/:lesson/:id/:inid" component={Lesson} />
         </div>
       </Router>
     </Provider>

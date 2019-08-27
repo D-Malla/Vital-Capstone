@@ -1,7 +1,8 @@
 const initialState = {
   lessons_title: [],
   lessons: [],
-  get_lessons: []
+  get_lessons: [],
+  lesson_data: []
 };
 
 export default function(state = initialState, action) {
@@ -12,6 +13,8 @@ export default function(state = initialState, action) {
       return { ...state, lessons: action.payloads };
     case "LIST_LESSONS":
       return { ...state, get_lessons: action.payload };
+    case "LESSON_DATA":
+      return { ...state, lesson_data: action.payload };
     default:
       return state;
   }

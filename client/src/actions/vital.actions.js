@@ -1,17 +1,6 @@
 import store from "../store";
 import axios from "axios";
 
-// MUST CHANGE localhost to IP ADDRESS
-// const socket = io.connect('http://localhost:8000')
-
-// socket.on('new person', name => {
-//   console.log(name)
-// })
-
-// export function submitName(name) {
-//   socket.emit('name', name)
-// }
-
 export function lessonsTitle() {
   axios.get("/api/lessons_title").then(resp => {
     store.dispatch({
@@ -25,7 +14,7 @@ export function matchLessons(slug) {
     console.log(resp.data);
     store.dispatch({
       type: "LESSONS",
-      payload: resp.data  
+      payload: resp.data
     });
   });
 }
@@ -35,6 +24,14 @@ export function getLessonTitles(id) {
     console.log(resp.data);
     store.dispatch({
       type: "LIST_LESSONS",
+      payload: resp.data
+    });
+  });
+}
+export function getLessonData(id) {
+  axios.get("/api/ind_lesson/" + id).then(resp => {
+    store.dispatch({
+      type: "LESSON_DATA",
       payload: resp.data
     });
   });

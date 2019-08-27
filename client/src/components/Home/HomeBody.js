@@ -26,8 +26,11 @@ export default props => {
         {title.map(item => (
           <div key={item.lesson} className="classSelector">
             <div>
-              <Link to={"/lessons/" + item.lesson + '/' + item.id} className="link">
-              <h3> {item.lesson}</h3>
+              <Link
+                to={"/lessons/" + item.lesson + "/" + item.id}
+                className="link"
+              >
+                <h3> {item.lesson}</h3>
               </Link>
               <p>{item.lesson_description}</p>
             </div>
