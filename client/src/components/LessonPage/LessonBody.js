@@ -19,15 +19,16 @@ export default props => {
   useEffect(() => {
     matchLessons(lesson);
     getLessonTitles(id);
-
     getLessonData(props.props.match.params.inid);
   }, [lesson, id, props.props.match.params.inid]);
+
   return (
     <div id="lessonBodyContainer">
       <aside className="lessonAside">
         {lessons_list.map(item => (
           <div key={item.id}>
             <Link
+              className="lesson-links"
               to={
                 "/lesson/" + item.lesson + "/" + item.parent_id + "/" + item.id
               }
@@ -37,13 +38,13 @@ export default props => {
           </div>
         ))}
         <button className="link-button">
-          <Link to="/lessons/HTML/1">HTML</Link>
+          <Link to="/lesson/Intro/1/4">HTML</Link>
         </button>
         <button className="link-button">
-          <Link to="/lessons/CSS/1">CSS</Link>
+          <Link to="/lesson/Intro/2/17">CSS</Link>
         </button>
         <button className="link-button">
-          <Link to="/lessons/JAVASCRIPT/1">JAVASCRIPT</Link>
+          <Link to="/lesson/Intro/3/31">JAVASCRIPT</Link>
         </button>
       </aside>
       <article className="lessonBody">

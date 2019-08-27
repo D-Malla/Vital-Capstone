@@ -67,12 +67,17 @@ a:visited {
 #lessonBodyContainer .lessonAside {
   background: #62929E;
   height: 500px;
-  width: 500px;
+  width: 200px;
 }
 
 #lessonBodyContainer .lessonAside ul li {
   font-size: 30px;
+  margin: 10px;
   list-style: none;
+}
+
+.lesson-link {
+  margin: 10px;
 }
 
 /* LESSON BODY STYLING */
@@ -81,10 +86,7 @@ a:visited {
   display: flex;
 }
 
-.bitch {
-  height: 300px;
-  width: 300px;
-}
+
 
 /* LESSON FOOTER STYLING */
 #lessonFooterContainer {
