@@ -1,5 +1,6 @@
 import store from "../store";
 import axios from "axios";
+import { Action } from "rxjs/internal/scheduler/Action";
 
 // MUST CHANGE localhost to IP ADDRESS
 // const socket = io.connect('http://localhost:8000')
@@ -25,7 +26,7 @@ export function matchLessons(slug) {
     console.log(resp.data);
     store.dispatch({
       type: "LESSONS",
-      payload: resp.data  
+      payload: resp.data
     });
   });
 }
@@ -35,6 +36,14 @@ export function getLessonTitles(id) {
     console.log(resp.data);
     store.dispatch({
       type: "LIST_LESSONS",
+      payload: resp.data
+    });
+  });
+}
+export function getLessonData(id) {
+  axios.get("/api/ind_lesson/" + id).then(resp => {
+    store.dispatch({
+      type: "LESSON_DATA",
       payload: resp.data
     });
   });
