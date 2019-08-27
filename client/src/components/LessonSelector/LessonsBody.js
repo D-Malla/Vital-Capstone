@@ -31,12 +31,12 @@ export default props => {
           </Link>
         </button>
         <button>
-          <Link to="/lessons/CSS/1" className="link-button">
+          <Link to="/lessons/CSS/2" className="link-button">
             CSS
           </Link>
         </button>
         <button>
-          <Link to="/lessons/JAVASCRIPT/1" className="link-button">
+          <Link to="/lessons/JAVASCRIPT/3" className="link-button">
             JAVASCRIPT
           </Link>
         </button>
