@@ -26,13 +26,19 @@ export default props => {
           </div>
         ))}
         <button>
-          <Link to="/lessons/HTML/1">HTML</Link>
+          <Link to="/lessons/HTML/1" className="link-button">
+            HTML
+          </Link>
         </button>
         <button>
-          <Link to="/lessons/CSS/1">CSS</Link>
+          <Link to="/lessons/CSS/1" className="link-button">
+            CSS
+          </Link>
         </button>
         <button>
-          <Link to="/lessons/JAVASCRIPT/1">JAVASCRIPT</Link>
+          <Link to="/lessons/JAVASCRIPT/1" className="link-button">
+            JAVASCRIPT
+          </Link>
         </button>
       </div>
     </div>
