@@ -1,14 +1,13 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import {  getLessonTitles } from "../../actions/vital.actions";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react"
+import { Link } from "react-router-dom"
+import {  getLessonTitles } from "../../actions/vital.actions"
+import { useSelector } from "react-redux"
 
 export default props => {
   const titles= useSelector(appState => appState.get_lessons);
   const id = props.props.match.params.id
   useEffect(() => {
     getLessonTitles(id);
-    console.log(id)
   }, [id]);
 
   return (

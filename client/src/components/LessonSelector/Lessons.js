@@ -8,7 +8,7 @@ import LessonsFooter from './LessonsFooter'
 export default props => {
   return (
     <div id='container'>
-      <LessonsHeader />
+      <LessonsHeader props={props}/>
       <LessonsBody props={props}/>
       <LessonsFooter />
     </div>
