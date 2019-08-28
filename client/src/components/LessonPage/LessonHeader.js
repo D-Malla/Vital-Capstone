@@ -8,11 +8,10 @@ import Img from "../../assets/Vital.png";
 export default props => {
   const lesson = props.props.match.params.lesson;
   const lesson_data = useSelector(appState => appState.lesson_data);
-  useEffect(
-    () => getLessonData(props.props.match.params.inid),
-    // matchLessons(lesson),
-    [lesson, props.props.match.params.inid]
-  );
+  useEffect(() => getLessonData(props.props.match.params.inid), [
+    lesson,
+    props.props.match.params.inid
+  ]);
   return (
     <header id="lessonHeaderContainer">
       <Link to="/">
