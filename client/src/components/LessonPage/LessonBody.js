@@ -3,24 +3,22 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ReactMarkdown from "react-markdown";
 
-import {
-  matchLessons,
-  getLessonTitles,
-  getLessonData
-} from "../../actions/vital.actions";
+import { getLessonTitles, getLessonData } from "../../actions/vital.actions";
 
 export default props => {
-  const title = useSelector(appState => appState.lessons_title);
+  // const title = useSelector(appState => appState.lessons_title);
   const lessons_list = useSelector(appState => appState.get_lessons);
   const lesson_data = useSelector(appState => appState.lesson_data);
-  const lesson = props.props.match.params.lesson;
+  // const lesson = props.props.match.params.lesson;
+  // const parent_id_new = props.props.match.params.parent_id;
   const id = props.props.match.params.id;
+  const prev_id = Number(props.props.match.params.inid) - 1;
+  const next_id = Number(props.props.match.params.inid) + 1;
 
   useEffect(() => {
-    matchLessons(lesson);
     getLessonTitles(id);
     getLessonData(props.props.match.params.inid);
-  }, [lesson, id, props.props.match.params.inid]);
+  }, [props.props.match.params]);
 
   return (
     <div id="lessonBodyContainer">
@@ -29,37 +27,32 @@ export default props => {
           <div key={item.id}>
             <Link
               className="lesson-links"
-              to={
-                "/lesson/" + item.lesson + "/" + item.parent_id + "/" + item.id
-              }
+              to={"/lesson" + "/" + item.parent_id + "/" + item.id}
             >
               {item.lesson}
             </Link>
           </div>
         ))}
         <button className="link-button">
-          <Link to="/lesson/Intro/1/4">HTML</Link>
+          <Link to="/lesson/1/4">HTML</Link>
         </button>
         <button className="link-button">
-          <Link to="/lesson/Intro/2/17">CSS</Link>
+          <Link to="/lesson/2/17">CSS</Link>
         </button>
         <button className="link-button">
-          <Link to="/lesson/Intro/3/31">JAVASCRIPT</Link>
+          <Link to="/lesson/3/31">JAVASCRIPT</Link>
         </button>
       </aside>
       <article className="lessonBody">
-        {lesson_data.map(item => {
-          let lesson_data = item.lesson_description;
-          return (
-            <p key={item.id}>
-              <ReactMarkdown source={lesson_data} />
-            </p>
-          );
-        })}
+        <ReactMarkdown source={lesson_data.lesson_description} />
       </article>
       <div>
-        <button type="button">PREV</button>
-        <button type="button">CONTINUE</button>
+        <button type="button">
+          <Link to={"/lesson/" + id + "/" + prev_id}>PREV</Link>
+        </button>
+        <button type="button">
+          <Link to={"/lesson/" + id + "/" + next_id}>CONTINUE</Link>
+        </button>
       </div>
     </div>
   );

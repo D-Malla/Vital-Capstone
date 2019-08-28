@@ -1,12 +1,17 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "../../styles/Lesson.css";
-import { matchLessons } from "../../actions/vital.actions";
+import { matchLessons, getLessonData } from "../../actions/vital.actions";
 
 export default props => {
   const lesson = props.props.match.params.lesson;
-
-  useEffect(() => matchLessons(lesson), [lesson]);
+  const lesson_data = useSelector(appState => appState.lesson_data);
+  useEffect(
+    () => getLessonData(props.props.match.params.inid),
+    // matchLessons(lesson),
+    [lesson, props.props.match.params.inid]
+  );
   return (
     <header id="lessonHeaderContainer">
       <Link to="/">
@@ -15,7 +20,7 @@ export default props => {
         </div>
       </Link>
       <div className="catchphraseDiv">
-        <h1>{lesson}</h1>
+        <h1>{lesson_data.lesson}</h1>
       </div>
       <div className="userButtonDiv">
         <button className="userButtons" type="button">

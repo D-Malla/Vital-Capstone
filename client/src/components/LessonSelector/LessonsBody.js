@@ -16,11 +16,7 @@ export default props => {
       <div className="lessonsBody">
         {titles.map(item => (
           <div key={item.id} className="indi-lessons">
-            <Link
-              to={
-                "/lesson/" + item.lesson + "/" + item.parent_id + "/" + item.id
-              }
-            >
+            <Link to={"/lesson" + "/" + item.parent_id + "/" + item.id}>
               {item.lesson}
             </Link>
           </div>
