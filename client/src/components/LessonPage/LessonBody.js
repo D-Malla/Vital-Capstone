@@ -3,19 +3,26 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ReactMarkdown from "react-markdown";
 
-import { getLessonTitles, getLessonData } from "../../actions/vital.actions";
+import {
+  getLessonTitles,
+  getLessonData,
+  matchLessons
+} from "../../actions/vital.actions";
 
 export default props => {
   const lessons_list = useSelector(appState => appState.get_lessons);
   const lesson_data = useSelector(appState => appState.lesson_data);
-  const id = props.props.match.params.id;
-  const prev_id = Number(props.props.match.params.inid) - 1;
-  const next_id = Number(props.props.match.params.inid) + 1;
+  const id = props.id;
+  const inid = props.inid;
+
+  //Grab the numbers and increment or decrement by 1 in order to change pages
+  const prev_id = Number(inid) - 1;
+  const next_id = Number(inid) + 1;
 
   useEffect(() => {
     getLessonTitles(id);
-    getLessonData(props.props.match.params.inid);
-  }, [props.props.match.params]);
+    getLessonData(inid);
+  }, [props]);
 
   return (
     <div id="lessonBodyContainer">
@@ -44,18 +51,21 @@ export default props => {
         <ReactMarkdown source={lesson_data.lesson_description} />
       </article>
       <div>
-        <button type="button">
-          <Link to={"/lesson/" + id + "/" + prev_id}>PREV</Link>
-
-          {/* <Link to={"/lesson/" + prev_cat + "/" + prev_id} /> */}
-        </button>
-        <button
-          className="next-category"
-          type="button"
-          disabled={next_id == 40}
-        >
-          <Link to={"/lesson/" + id + "/" + next_id}>CONTINUE</Link>
-        </button>
+        {prev_id > 3 ? (
+          <button className="link-button" type="button">
+            <Link to={"/lesson/" + id + "/" + prev_id}>PREV</Link>
+          </button>
+        ) : (
+          ""
+        )}
+        {console.log(next_id)}
+        {next_id !== 41 ? (
+          <button className="link-button" type="button">
+            <Link to={"/lesson/" + id + "/" + next_id}>CONTINUE</Link>
+          </button>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
