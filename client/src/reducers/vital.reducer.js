@@ -2,7 +2,7 @@ const initialState = {
   lessons_title: [],
   lessons: [],
   get_lessons: [],
-  lesson_data: []
+  lesson_data: {}
 };
 
 export default function(state = initialState, action) {

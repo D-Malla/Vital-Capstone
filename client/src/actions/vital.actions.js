@@ -32,7 +32,7 @@ export function getLessonData(id) {
   axios.get("/api/ind_lesson/" + id).then(resp => {
     store.dispatch({
       type: "LESSON_DATA",
-      payload: resp.data
+      payload: resp.data[0]
     });
   });
 }

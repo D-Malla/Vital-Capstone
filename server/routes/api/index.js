@@ -40,7 +40,7 @@ router.get("/ind_lesson/:id", (req, res, next) => {
   });
 });
 
-// router.get("/lesson_content/:slug", (req, res, next) => {
+// router.get("/lesson_title/:slug", (req, res, next) => {
 //   const slug = req.params.slug;
 //   const sql = `SELECT p.lesson_question, p.content, p.id, c.parent_id as parent_id
 //   FROM lessons_content p
