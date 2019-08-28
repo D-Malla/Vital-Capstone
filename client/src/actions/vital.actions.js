@@ -11,7 +11,6 @@ export function lessonsTitle() {
 }
 export function matchLessons(slug) {
   axios.get("/api/lesson_title/" + slug).then(resp => {
-    console.log(resp.data);
     store.dispatch({
       type: "LESSONS",
       payload: resp.data
@@ -21,7 +20,6 @@ export function matchLessons(slug) {
 
 export function getLessonTitles(id) {
   axios.get("/api/lessons_title/" + id).then(resp => {
-    console.log(resp.data);
     store.dispatch({
       type: "LIST_LESSONS",
       payload: resp.data
@@ -30,6 +28,8 @@ export function getLessonTitles(id) {
 }
 export function getLessonData(id) {
   axios.get("/api/ind_lesson/" + id).then(resp => {
+    console.log("lesson data action id", id);
+    console.log("lesson data action", resp.data[0]);
     store.dispatch({
       type: "LESSON_DATA",
       payload: resp.data[0]

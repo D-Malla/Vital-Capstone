@@ -32,6 +32,7 @@ router.get("/lessons_title/:id", (req, res, next) => {
 
 router.get("/ind_lesson/:id", (req, res, next) => {
   const id = req.params.id;
+  console.log(req.params);
   const sql = `SELECT * FROM lessons_title WHERE id = ?
   `;
 

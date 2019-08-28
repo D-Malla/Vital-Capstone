@@ -2,16 +2,13 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "../../styles/Lesson.css";
-import { matchLessons, getLessonData } from "../../actions/vital.actions";
+import { getLessonData } from "../../actions/vital.actions";
 import Img from "../../assets/Vital.png";
 
 export default props => {
-  const lesson = props.props.match.params.lesson;
   const lesson_data = useSelector(appState => appState.lesson_data);
-  useEffect(() => getLessonData(props.props.match.params.inid), [
-    lesson,
-    props.props.match.params.inid
-  ]);
+  useEffect(() => getLessonData(props.inid), [props.inid]);
+
   return (
     <header id="lessonHeaderContainer">
       <Link to="/">

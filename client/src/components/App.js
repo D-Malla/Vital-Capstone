@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "normalize.css/normalize.css";
 import "../styles/Home.css";
 import { Provider } from "react-redux";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import store from "../store";
 import HtmlPage from "./lessons/HTML";
 
@@ -21,9 +21,11 @@ export default props => {
     <Provider store={store}>
       <Router>
         <div>
-          <Route exact path="/" component={Home} />
-          <Route path="/lessons/:slug/:id" component={Lessons} />
-          <Route path="/lesson/:id/:inid" component={Lesson} />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/lessons/:slug/:id" component={Lessons} />
+            <Route path="/lesson/:id/:inid" component={Lesson} />
+          </Switch>
         </div>
       </Router>
     </Provider>
