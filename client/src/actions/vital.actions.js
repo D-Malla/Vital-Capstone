@@ -28,8 +28,6 @@ export function getLessonTitles(id) {
 }
 export function getLessonData(id) {
   axios.get("/api/ind_lesson/" + id).then(resp => {
-    console.log("lesson data action id", id);
-    console.log("lesson data action", resp.data[0]);
     store.dispatch({
       type: "LESSON_DATA",
       payload: resp.data[0]
