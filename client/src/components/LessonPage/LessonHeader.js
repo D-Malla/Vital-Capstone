@@ -17,7 +17,9 @@ export default props => {
         </div>
       </Link>
       <div className="catchphraseDiv">
-        <h1>{lesson_data.lesson}</h1>
+        <a href="http://react-tetris.surge.sh/">
+          <h1>{lesson_data.lesson}</h1>
+        </a>
       </div>
       <div className="userButtonDiv">
         <button className="userButtons" type="button">

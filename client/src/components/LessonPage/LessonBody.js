@@ -12,7 +12,7 @@ import {
 export default props => {
   const lessons_list = useSelector(appState => appState.get_lessons);
   const lesson_data = useSelector(appState => appState.lesson_data);
-  const id = props.id;
+  let id = props.id;
   const inid = props.inid;
 
   //Grab the numbers and increment or decrement by 1 in order to change pages
@@ -22,11 +22,12 @@ export default props => {
   useEffect(() => {
     getLessonTitles(id);
     getLessonData(inid);
-  }, [props]);
+  }, [props.id, props.inid]);
 
   return (
     <div id="lessonBodyContainer">
       <aside className="lessonAside">
+        {/* {console.log("lesson_list", lessons_list[lessons_list.length - 1])} */}
         {lessons_list.map(item => (
             <Link key={item.id} className="lesson-links" to={"/lesson" + " " + item.parent_id + "/" + item.id}
             >
@@ -44,6 +45,7 @@ export default props => {
         </button>
       </aside>
       <div>
+
         <div className='lessonBodyDiv'>
           <article className="lessonBody">
             <ReactMarkdown source={lesson_data.lesson_description} />
@@ -66,6 +68,7 @@ export default props => {
             ""
           )}
         </div>
+
       </div>
     </div>
   );

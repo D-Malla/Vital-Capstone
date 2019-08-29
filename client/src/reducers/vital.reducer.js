@@ -14,8 +14,6 @@ export default function(state = initialState, action) {
     case "LIST_LESSONS":
       return { ...state, get_lessons: action.payload };
     case "LESSON_DATA":
-      console.log("lesson data", action.payload);
-
       return { ...state, lesson_data: action.payload };
     default:
       return state;
