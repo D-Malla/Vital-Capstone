@@ -18,8 +18,8 @@ a:visited {
   color: white;
 }
 
-.link-button {
-  background-color: black;
+a:hover {
+  color: rgb(255, 145, 137);
 }
 
 /* LESSON STYLING */
@@ -106,6 +106,20 @@ a:visited {
   margin-left: 175px;
   overflow-y: scroll;
   width: 800px;
+}
+
+#lessonBodyContainer .lessonButtonDiv {
+  margin-top: 75px;
+  justify-content: center;
+  display: flex;
+}
+
+#lessonBodyContainer .lessonButtonDiv .link-button {
+  color: rgb(255, 145, 137);
+  font-size: 14px;
+  height: 30px;
+  margin: 0 10px;
+  width: 90px;
 }
 
 /* LESSON FOOTER STYLING */

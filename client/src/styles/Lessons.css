@@ -87,6 +87,10 @@ a:visited {
   color: black;
 }
 
+#lessonsBodyContainer .lessonsBody .indi-lessons:hover {
+  color:  rgb(255, 145, 137);
+}
+
 /* LESSONS FOOTER STYLING */
 #lessonsFooterContainer {
   background: #484848;
