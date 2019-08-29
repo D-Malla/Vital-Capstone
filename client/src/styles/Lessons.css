@@ -30,8 +30,7 @@ a:visited {
 
 /* LESSONS HEADER STYLING */
 #lessonsHeaderContainer {
-  background: #022F40;
-  color: white;
+  background:#484848; 
   display: flex;
   height: 100px;
   justify-content: space-between;
@@ -57,34 +56,40 @@ a:visited {
 
 #lessonsHeaderContainer .userButtonDiv {
   display: flex;
-  justify-content: space-evenly;
-  padding-top: 12px;
+  padding-top: 34px;
   width: 22%;
 }
 
 #lessonsHeaderContainer .userButtonDiv .userButtons {
   border-radius: 5px;
-  height: 50px;
+  font-size: 12px;
+  height: 30px;
+  margin-left: 20px;
   outline: none;
-  width: 125px;
+  width: 100px;
 }
 
 /* LESSONS BODY STYLING */
 #lessonsBodyContainer {
-  background: #C6C5B9;
+  background: white;
   display: flex;
   height: 500px;
 }
 
 #lessonsBodyContainer .lessonsBody {
-  background: #62929E;
+  background: white;
+  color: black;
   margin: 0 auto;
   width: 80%;
 }
 
+#lessonsBodyContainer .lessonsBody .indi-lessons {
+  color: black;
+}
+
 /* LESSONS FOOTER STYLING */
 #lessonsFooterContainer {
-  background: #022F40;
+  background: #484848;
   color: white;
   display: flex;
   justify-content: space-between;

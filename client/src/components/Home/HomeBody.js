@@ -19,22 +19,16 @@ export default props => {
       <div className="greeting">
         <h1>WELCOME!</h1>
       </div>
-
       <div className="classSelectorDiv">
-        {console.log(title)}
-
         {title.map(item => (
-          <div key={item.lesson} className="classSelector">
-            <div>
-              <Link
-                to={"/lessons/" + item.lesson + "/" + item.id}
-                className="link"
-              >
+        <Link to={"/lessons/" + item.lesson + "/" + item.id} className="link">
+            <div key={item.lesson} className="classSelector ">
+              <div>
                 <h3> {item.lesson}</h3>
-              </Link>
-              <p>{item.lesson_description}</p>
+                <p>{item.lesson_description}</p>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
