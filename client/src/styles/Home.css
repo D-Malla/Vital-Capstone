@@ -11,7 +11,7 @@ html {
 
 /* GENERAL STYLING */
 a {
-  color: white;
+  color:white;
   text-decoration: none;
 }
 
@@ -28,8 +28,8 @@ a:visited {
 
 /* HOME HEADER STYLING */
 #homeHeaderContainer {
-  background: #022F40;
-  color: white;
+  background: #484848;
+  color:white;
   display: flex;
   height: 100px;
   position: fixed;
@@ -52,27 +52,33 @@ a:visited {
 }
 
 #homeHeaderContainer .catchphraseDiv {
-  width: 50%;
+  padding-top: 22px;
   text-align: center;
+  width: 50%;
+}
+
+#homeHeaderContainer .catchphraseDiv h1 {
+  font-size: 20px;
 }
 
 #homeHeaderContainer .userButtonDiv {
   display: flex;
-  justify-content: space-evenly;
-  padding-top: 22px;
+  padding-top: 34px;
   width: 22%;
 }
 
 #homeHeaderContainer .userButtonDiv .userButtons {
   border-radius: 5px;
-  height: 50px;
+  font-size: 12px;
+  height: 30px;
+  margin-left: 20px;
   outline: none;
-  width: 125px;
+  width: 100px;
 }
 
 /* HOME BODY STYLING */
 #homeBodyContainer {
-  background: #C6C5B9;
+  background: white;
   height: 100%;
 }
 
@@ -82,81 +88,55 @@ a:visited {
   background-size: cover;
   background-position-y: -500px;
   background-repeat: no-repeat;
-  height: 300px;
+  height: 400px;
   margin-top: 100px;
 }
 
 #homeBodyContainer .imgOverlay {
-  background: rgba(127, 209, 185, .5);
-  height: 300px;
+  background: rgba(51, 129, 144, .7);
+  height: 400px;
   position: absolute;
   top: 100px;
   width: 100%;
 }
 
 #homeBodyContainer .greeting {
-  left: 450px;
+  left: 390px;
   position: absolute;
-  top: 125px;
+  top: 210px; 
 }
 
 #homeBodyContainer .greeting h1 {
   color: white;
-  font-size: 60px;
+  font-size: 80px;
 }
 
 /* HOME BODY CLASS SELECTOR STYLING */
 #homeBodyContainer .classSelectorDiv {
   display: flex;
+}
+
+#homeBodyContainer .classSelectorDiv a {
+  display: flex;
   justify-content: space-evenly;
-
-
-
+  width: 100%;
 }
 
-#homeBodyContainer .classSelectorDiv .classSelector {
-  border: 1px solid gray;
-  border-radius: 10px;
-  box-shadow: 3px 3px 0px 0px #888888;
+#homeBodyContainer .classSelectorDiv a:hover {
+  background: rgb(255, 145, 137); 
   color: white;
+}
+
+#homeBodyContainer .classSelectorDiv a .classSelector {
+  color: rgb(51, 129, 144);
   cursor: pointer;
-  height: 100%;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  height: 300px;
+  padding: 80px 30px;
   text-align: center;
-  width: 25%;
 }
 
-/* #homeBodyContainer .classSelectorDiv .classSelector:active {
-  height: 195px;
-  width: 24%;
-} */
-
-.sub-lessons a:hover {
-  color: #C6C5B9;
-}
-
-.classSelector {
-  background: #62929E;
-  height: 100%;
-}
-
-.sub-lessons {
-  height: 100%;
-}
-
-.indi-lessons {
-  height: 25px;
-
-}
-
-#homeBodyContainer .classSelectorDiv .classSelector h3 {
-  font-size: 30px;
-  margin: 0px auto;
-  background: #022F40;
-  border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
-  padding-top: 12px;
+#homeBodyContainer .classSelectorDiv a .classSelector:hover {
+  color: white;
 }
 
 #homeBodyContainer .classSelectorDiv .classSelector p {
@@ -164,12 +144,11 @@ a:visited {
   padding-top: 0px;
   font-size: 20px;
   margin-bottom: 10px;
-  /* border-bottom: 1px solid blue; */
 }
 
 /* HOME FOOTER STYLING */
 #homeFooterContainer {
-  background: #022F40;
+  background: #484848;
   color: white;
   display: flex;
   justify-content: space-between;

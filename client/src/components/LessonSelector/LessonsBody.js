@@ -19,8 +19,8 @@ export default props => {
     <div id="lessonsBodyContainer">
       <div className="lessonsBody">
         {titles.map(item => (
-          <div key={item.id} className="indi-lessons">
-            <Link to={"/lesson/" + item.parent_id + "/" + item.id}>
+          <div key={item.id} >
+            <Link to={"/lesson/" + item.parent_id + "/" + item.id} className="indi-lessons">
               {item.lesson}
             </Link>
           </div>

@@ -30,7 +30,7 @@ a:visited {
 
 /* LESSON HEADER STYLING */
 #lessonHeaderContainer {
-  background: #022F40;
+  background: #484848;
   color: white;
   display: flex;
   height: 100px;
@@ -57,62 +57,60 @@ a:visited {
 
 #lessonHeaderContainer .userButtonDiv {
   display: flex;
-  justify-content: space-evenly;
-  padding-top: 12px;
+  padding-top: 34px;
   width: 22%;
 }
 
 #lessonHeaderContainer .userButtonDiv .userButtons {
   border-radius: 5px;
-  height: 50px;
+  font-size: 12px;
+  height: 30px;
+  margin-left: 20px;
   outline: none;
-  width: 125px;
+  width: 100px;
 }
 
 /* LESSON ASIDE STYLING */
 #lessonBodyContainer .lessonAside {
-  background: #62929E;
-  height: 500px;
-  width: 200px;
+  background: white;
+  height: 100%;
+  padding: 20px 30px;
+  width: 250px;
 }
 
-#lessonBodyContainer .lessonAside ul li {
-  font-size: 30px;
-  margin: 10px;
-  list-style: none;
+#lessonBodyContainer .lessonAside .lesson-links {
+  color: black;
+  display: flex;
+  font-size: 16px;
+  line-height: 40px;
 }
-
-.lesson-link {
-  margin: 10px;
+#lessonBodyContainer .lessonAside .lesson-links:hover {
+  color:  rgb(255, 145, 137);
 }
 
 /* LESSON BODY STYLING */
 #lessonBodyContainer {
-  background: #C6C5B9;
+  background: white;
+  color: black;
   display: flex;
   width: 100%;
 }
 
-.lessonBody h1 {
-  width: 25%
+#lessonBodyContainer .lessonBodyDiv .lessonBody {
+  width: 752px;
+  padding: 10px 50px;
 }
 
-blockquote {
-  width: 100%;
-}
-
-.lessonBody {
-  width: 755px;
-  padding: 10px;
-}
-
-code {
-  width: 755px;
+#lessonBodyContainer .lessonBodyDiv {
+  height: 477px;
+  margin-left: 175px;
+  overflow-y: scroll;
+  width: 800px;
 }
 
 /* LESSON FOOTER STYLING */
 #lessonFooterContainer {
-  background: #022F40;
+  background: #484848;
   color: white;
   display: flex;
   justify-content: space-between;
