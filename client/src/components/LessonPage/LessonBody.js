@@ -53,24 +53,24 @@ export default props => {
           }}
           fadeSpeed={200}
         >
+        <div>
           {lessons_list.map(item => (
-            <Link
-              key={item.id}
-              className="lesson-links"
-              to={"/lesson" + "/" + item.parent_id + "/" + item.id}
-            >
+            <Link key={item.id} className="lesson-links" to={"/lesson" + "/" + item.parent_id + "/" + item.id}>
               {item.lesson}{" "}
             </Link>
           ))}
-          <button className="link-button">
-            <Link to="/lesson/1/4">HTML</Link>
-          </button>
-          <button className="link-button">
-            <Link to="/lesson/2/17">CSS</Link>
-          </button>
-          <button className="link-button">
-            <Link to="/lesson/3/31">JAVASCRIPT</Link>
-          </button>
+         </div>
+        <div className='lessonCourseDiv'>
+            <Link className='aLink' to="/lesson/1/4">
+              <button className="link-button">HTML</button>
+            </Link>
+            <Link className='aLink' to="/lesson/2/17">
+              <button className="link-button">CSS</button>
+            </Link>
+            <Link className='aLink' to="/lesson/3/31">
+            <button className="link-button">JAVASCRIPT</button>
+            </Link>
+          </div>
         </LoadingOverlay>
       </aside>
 
@@ -92,27 +92,27 @@ export default props => {
             </article>
           </div>
 
-          <div className="lessonButtonDiv">
-            {prev_id > 3 ? (
-              <Link to={"/lesson/" + id + "/" + prev_id}>
-                <button className="link-button" type="button">
-                  PREV
-                </button>
-              </Link>
-            ) : (
-              ""
-            )}
-            {console.log(next_id)}
-            {next_id !== 41 ? (
-              <Link to={"/lesson/" + id + "/" + next_id}>
-                <button className="link-button" type="button">
-                  CONTINUE
-                </button>
-              </Link>
-            ) : (
-              ""
-            )}
-          </div>
+          <div className='lessonButtonDiv'>
+          {prev_id > 3 ? (
+            <Link className='aLink' to={"/lesson/" + id + "/" + prev_id}>
+              <button className="link-button" type="button">
+                PREV
+              </button>
+            </Link>
+          ) : (
+            ""
+          )}
+          {console.log(next_id)}
+          {next_id !== 41 ? (
+            <Link className='aLink' to={"/lesson/" + id + "/" + next_id}>
+              <button className="link-button" type="button">
+                CONTINUE
+              </button>
+            </Link>
+          ) : (
+            ""
+          )}
+        </div>
         </LoadingOverlay>
       </div>
     </div>

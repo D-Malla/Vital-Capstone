@@ -21,7 +21,7 @@ export default props => {
       </div>
       <div className="classSelectorDiv">
         {title.map(item => (
-        <Link to={"/lessons/" + item.lesson + "/" + item.id} className="link">
+        <Link key={item.id} to={"/lessons/" + item.lesson + "/" + item.id} className="link">
             <div key={item.lesson} className="classSelector ">
               <div>
                 <h3> {item.lesson}</h3>

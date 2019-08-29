@@ -6,7 +6,7 @@ import HomeFooter from './HomeFooter'
 
 export default props => {
   return (
-    <div id='container'>
+    <div id='homeContainer'>
       <HomeHeader />
       <HomeBody />
       <HomeFooter />
