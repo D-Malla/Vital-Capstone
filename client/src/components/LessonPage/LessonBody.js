@@ -12,7 +12,7 @@ import {
 export default props => {
   const lessons_list = useSelector(appState => appState.get_lessons);
   const lesson_data = useSelector(appState => appState.lesson_data);
-  const id = props.id;
+  let id = props.id;
   const inid = props.inid;
 
   //Grab the numbers and increment or decrement by 1 in order to change pages
@@ -22,11 +22,12 @@ export default props => {
   useEffect(() => {
     getLessonTitles(id);
     getLessonData(inid);
-  }, [props]);
+  }, [props.id, props.inid]);
 
   return (
     <div id="lessonBodyContainer">
       <aside className="lessonAside">
+        {/* {console.log("lesson_list", lessons_list[lessons_list.length - 1])} */}
         {lessons_list.map(item => (
           <div key={item.id}>
             <Link
@@ -58,7 +59,7 @@ export default props => {
         ) : (
           ""
         )}
-        {console.log(next_id)}
+        {/* {console.log(next_id)} */}
         {next_id !== 41 ? (
           <button className="link-button" type="button">
             <Link to={"/lesson/" + id + "/" + next_id}>CONTINUE</Link>
