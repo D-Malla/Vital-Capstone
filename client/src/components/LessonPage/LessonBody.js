@@ -27,7 +27,6 @@ export default props => {
   return (
     <div id="lessonBodyContainer">
       <aside className="lessonAside">
-        {/* {console.log("lesson_list", lessons_list[lessons_list.length - 1])} */}
         {lessons_list.map(item => (
           <div key={item.id}>
             <Link
