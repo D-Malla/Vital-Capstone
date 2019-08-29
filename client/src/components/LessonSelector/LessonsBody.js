@@ -70,15 +70,6 @@ export default props => {
           }}
           fadeSpeed={200}
         >
-          <Link className='aLink' to="/lesson/1/4">
-            <button className="link-button">HTML</button>
-          </Link>
-          <Link className='aLink' to="/lesson/2/17">
-            <button className="link-button">CSS</button>
-          </Link>
-          <Link className='aLink' to="/lesson/3/31">
-            <button className="link-button">JAVASCRIPT</button>
-          </Link>
         </LoadingOverlay>
       </div>
       {/* <ReactMarkDown source={lesson_data.lesson_description} /> */}
