@@ -8,7 +8,7 @@ export default props => {
           <img src={Img} alt='Vital Logo'/>
         </div>
         <div className='catchphraseDiv'>
-          <h1>Coding Made Simple!</h1>
+          <h1>CODING MADE SIMPLE!</h1>
         </div>
         <div className='userButtonDiv'>
           <button className='userButtons' type='button'>Student</button>
