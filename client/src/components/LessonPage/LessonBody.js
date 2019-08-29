@@ -28,7 +28,7 @@ export default props => {
     <div id="lessonBodyContainer">
       <aside className="lessonAside">
         {lessons_list.map(item => (
-            <Link key={item.id} className="lesson-links" to={"/lesson" + " " + item.parent_id + "/" + item.id}
+            <Link key={item.id} className="lesson-links" to={"/lesson" + "/" + item.parent_id + "/" + item.id}
             >
               {item.lesson}
             </Link>
@@ -44,13 +44,12 @@ export default props => {
         </button>
       </aside>
       <div>
-
         <div className='lessonBodyDiv'>
           <article className="lessonBody">
             <ReactMarkdown source={lesson_data.lesson_description} />
           </article>
         </div>
-        <div>
+        <div className='lessonButtonDiv'>
           {prev_id > 3 ? (
             <button className="link-button" type="button">
               <Link to={"/lesson/" + id + "/" + prev_id}>PREV</Link>
@@ -67,7 +66,6 @@ export default props => {
             ""
           )}
         </div>
-
       </div>
     </div>
   );
