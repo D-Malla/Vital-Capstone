@@ -18,8 +18,22 @@ a:visited {
   color: white;
 }
 
+a:hover {
+  color: rgb(255, 145, 137);
+}
+
 .link-button {
-  background-color: black;
+  color: white;
+  font-size: 12px;
+  height: 30px;
+  margin: 0 10px;
+  width: 90px;
+  background: rgb(51, 129, 144);
+  border-radius: 10px;
+}
+
+.link-button:hover {
+  background: rgb(255, 145, 137);
 }
 
 /* LESSONS STYLING */
@@ -73,7 +87,7 @@ a:visited {
 #lessonsBodyContainer {
   background: white;
   display: flex;
-  height: 500px;
+  min-height: 491px;
 }
 
 #lessonsBodyContainer .lessonsBody {

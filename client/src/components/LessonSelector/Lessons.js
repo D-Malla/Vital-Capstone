@@ -7,7 +7,7 @@ import LessonsFooter from "./LessonsFooter";
 
 export default props => {
   return (
-    <div id="container">
+    <div id="lessonsContainer">
       <LessonsHeader props={props} />
       <LessonsBody props={props} />
       <LessonsFooter />

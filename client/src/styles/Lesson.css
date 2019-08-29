@@ -8,6 +8,19 @@ html {
   box-sizing: inherit;
 }
 
+::-webkit-scrollbar {
+
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+border-radius: 10px;
+background: rgb(255, 145, 137);
+}
+
+::-webkit-scrollbar-track {
+width: 10px;
+}
 /* GENERAL STYLING */
 a {
   color: white;
@@ -20,6 +33,21 @@ a:visited {
 
 a:hover {
   color: rgb(255, 145, 137);
+}
+
+.link-button {
+  background: rgb(51, 129, 144);
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+  height: 30px;
+  margin: 0 10px;
+  outline: none;
+  width: 90px;
+}
+
+.link-button:hover {
+  background: rgb(255, 145, 137);
 }
 
 /* LESSON STYLING */
@@ -71,11 +99,16 @@ a:hover {
 }
 
 /* LESSON ASIDE STYLING */
-#lessonBodyContainer .lessonAside {
+#lessonBodyContainer > .lessonAside {
   background: white;
-  height: 100%;
-  padding: 20px 30px;
+  overflow-y: hidden;
+  padding: 10px 30px;
   width: 250px;
+}
+
+#lessonBodyContainer .lessonAside:hover {
+  overflow-y: scroll;
+  /* transition: overflow ease 2s; */
 }
 
 #lessonBodyContainer .lessonAside .lesson-links {
@@ -88,38 +121,37 @@ a:hover {
   color:  rgb(255, 145, 137);
 }
 
+#lessonBodyContainer .lessonAside .lessonCourseDiv {
+  margin-top: 100px;
+}
+
 /* LESSON BODY STYLING */
 #lessonBodyContainer {
   background: white;
   color: black;
   display: flex;
-  width: 100%;
-}
-
-#lessonBodyContainer .lessonBodyDiv .lessonBody {
-  width: 752px;
-  padding: 10px 50px;
+  height: 491px;
+ 
 }
 
 #lessonBodyContainer .lessonBodyDiv {
-  height: 477px;
-  margin-left: 175px;
+  height: 400px;
+  overflow-y: hidden;
+  width: 1000px;
+}
+
+#lessonBodyContainer .lessonBodyDiv .lessonBody {
+  padding: 20px 50px;
+}
+
+#lessonBodyContainer .lessonBodyDiv:hover {
   overflow-y: scroll;
-  width: 800px;
 }
 
 #lessonBodyContainer .lessonButtonDiv {
-  margin-top: 75px;
+  margin-top: 45px;
   justify-content: center;
   display: flex;
-}
-
-#lessonBodyContainer .lessonButtonDiv .link-button {
-  color: rgb(255, 145, 137);
-  font-size: 14px;
-  height: 30px;
-  margin: 0 10px;
-  width: 90px;
 }
 
 /* LESSON FOOTER STYLING */

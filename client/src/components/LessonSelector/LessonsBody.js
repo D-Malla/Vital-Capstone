@@ -26,15 +26,15 @@ export default props => {
           </div>
         ))}
 
-        <button className="link-button">
-          <Link to="/lesson/1/4">HTML</Link>
-        </button>
-        <button className="link-button">
-          <Link to="/lesson/2/17">CSS</Link>
-        </button>
-        <button className="link-button">
-          <Link to="/lesson/3/31">JAVASCRIPT</Link>
-        </button>
+          <Link className='aLink' to="/lesson/1/4">
+            <button className="link-button">HTML</button>
+          </Link>
+          <Link className='aLink' to="/lesson/2/17">
+            <button className="link-button">CSS</button>
+          </Link>
+          <Link className='aLink' to="/lesson/3/31">
+            <button className="link-button">JAVASCRIPT</button>
+          </Link>
       </div>
       {/* <ReactMarkDown source={lesson_data.lesson_description} /> */}
     </div>
