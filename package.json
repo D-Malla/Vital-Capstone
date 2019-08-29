@@ -18,7 +18,9 @@
   "homepage": "https://github.com/pc-summer-2019/boilerplate#readme",
   "dependencies": {
     "concurrently": "^4.1.1",
+    "react-loading-overlay": "^1.0.1",
     "react-markdown": "^4.1.0",
+    "react-spinners": "^0.6.1",
     "react-syntax-highlighter": "^11.0.2"
   },
   "boilerplate": {
