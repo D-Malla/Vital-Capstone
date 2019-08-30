@@ -6,7 +6,6 @@ import LoadingOverlay from "react-loading-overlay";
 import ReactMarkDown from "react-markdown";
 
 export default props => {
-  const titles = useSelector(appState => appState.get_lessons);
   const lessonData = useSelector(appState => appState.lesson_data)
   const [loadState, setLoadState] = useState(true);
   const id = props.props.match.params.id;
@@ -27,10 +26,10 @@ export default props => {
     } else if (lessonData.id === 2) {
       props.props.history.push('/lesson/2/18')
     } else if (lessonData.id === 3) {
-      props.props.history.push('/lesson/3/31')
+      props.props.history.push('/lesson/3/32')
     }
   }
-  console.log(lessonData, titles)
+  console.log(lessonData)
 
   useEffect(() => {
     getLessonData(id)
