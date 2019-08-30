@@ -30,10 +30,10 @@ export default props => {
     } else if (lessonData.id === 2) {
       props.props.history.push("/lesson/2/18");
     } else if (lessonData.id === 3) {
-      props.props.history.push("/lesson/3/31");
+      props.props.history.push('/lesson/3/32')
     }
   }
-  console.log(lessonData, titles);
+  console.log(lessonData)
 
   useEffect(() => {
     getLessonData(id);
