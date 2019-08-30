@@ -64,8 +64,13 @@ a:hover {
 }
 
 #lessonsHeaderContainer .catchphraseDiv {
-  width: 50%;
   text-align: center;
+  width: 50%;
+}
+
+#lessonHeaderContainer .catchphraseDiv h1 {
+  padding-left: 165px;
+  padding-top: 5px;
 }
 
 #lessonsHeaderContainer .userButtonDiv {
@@ -97,8 +102,18 @@ a:hover {
   width: 80%;
 }
 
-#lessonsBodyContainer .lessonsBody .indi-lessons {
-  color: black;
+#lessonsBodyContainer .lessonsBody .lessonsIntroDiv {
+  height: 400px;
+  overflow-y: hidden;
+}
+
+#lessonsBodyContainer .lessonsBody .lessonsIntroDiv:hover {
+  overflow-y: scroll;
+}
+
+#lessonsBodyContainer .lessonsBody .link-button {
+  display: block;
+  margin: 20px auto;
 }
 
 #lessonsBodyContainer .lessonsBody .indi-lessons:hover {

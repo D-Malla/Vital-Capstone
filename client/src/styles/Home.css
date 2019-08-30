@@ -93,6 +93,11 @@ a:hover {
   width: 100px;
 }
 
+#homeHeaderContainer .userButtonDiv .userButtons:hover {
+  background: rgb(255, 145, 137);
+  color: white;
+}
+
 /* HOME BODY STYLING */
 #homeBodyContainer {
   background: white;
