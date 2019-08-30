@@ -26,6 +26,7 @@ export function getLessonTitles(id) {
     });
   });
 }
+
 export function getLessonData(id) {
   axios.get("/api/ind_lesson/" + id).then(resp => {
     store.dispatch({
