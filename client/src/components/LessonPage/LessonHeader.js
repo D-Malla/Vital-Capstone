@@ -7,7 +7,9 @@ import Img from "../../assets/Vital.png";
 import LoadingOverlay from "react-loading-overlay";
 
 export default props => {
-  const lesson_data = useSelector(appState => appState.lesson_data);
+  const lesson_data = useSelector(
+    appState => appState.vitalReducer.lesson_data
+  );
   useEffect(() => getLessonData(props.inid), [props.inid]);
   const [loadState, setLoadState] = useState(true);
 

@@ -4,6 +4,7 @@ import "../styles/Home.css";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import store from "../store";
+import Quiz from "./Quiz/Quiz";
 import HtmlPage from "./lessons/HTML";
 
 import Home from "./Home/Home";
@@ -25,6 +26,7 @@ export default props => {
             <Route exact path="/" component={Home} />
             <Route path="/lessons/:slug/:id" component={Lessons} />
             <Route path="/lesson/:id/:inid" component={Lesson} />
+            <Route path="/quiz/:parent_id/:parent_id" component={Quiz} />
           </Switch>
         </div>
       </Router>

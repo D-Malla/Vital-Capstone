@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { lessonsTitle } from "../../actions/vital.actions";
 
 export default props => {
-  const title = useSelector(appState => appState.lessons_title);
-
+  const title = useSelector(appState => appState.vitalReducer.lessons_title);
+  console.log(title);
   useEffect(() => {
     lessonsTitle();
   }, []);
@@ -21,7 +21,11 @@ export default props => {
       </div>
       <div className="classSelectorDiv">
         {title.map(item => (
-        <Link key={item.id} to={"/lessons/" + item.lesson + "/" + item.id} className="link">
+          <Link
+            key={item.id}
+            to={"/lessons/" + item.lesson + "/" + item.id}
+            className="link"
+          >
             <div key={item.lesson} className="classSelector ">
               <div>
                 <h3> {item.lesson}</h3>

@@ -14,13 +14,14 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-border-radius: 10px;
-background: rgb(255, 145, 137);
+  border-radius: 10px;
+  background: rgb(255, 145, 137);
 }
 
 ::-webkit-scrollbar-track {
-width: 10px;
+  width: 10px;
 }
+
 /* GENERAL STYLING */
 a {
   color: white;
@@ -99,7 +100,7 @@ a:hover {
 }
 
 /* LESSON ASIDE STYLING */
-#lessonBodyContainer > .lessonAside {
+#lessonBodyContainer>.lessonAside {
   background: white;
   overflow-y: hidden;
   padding: 10px 30px;
@@ -117,8 +118,9 @@ a:hover {
   font-size: 16px;
   line-height: 40px;
 }
+
 #lessonBodyContainer .lessonAside .lesson-links:hover {
-  color:  rgb(255, 145, 137);
+  color: rgb(255, 145, 137);
 }
 
 #lessonBodyContainer .lessonAside .lessonCourseDiv {
@@ -131,7 +133,7 @@ a:hover {
   color: black;
   display: flex;
   height: 491px;
- 
+
 }
 
 #lessonBodyContainer .lessonBodyDiv {
