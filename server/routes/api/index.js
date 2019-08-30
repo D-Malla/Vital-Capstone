@@ -41,18 +41,23 @@ router.get("/ind_lesson/:id", (req, res, next) => {
   });
 });
 
-// router.get("/lesson_title/:slug", (req, res, next) => {
-//   const slug = req.params.slug;
-//   const sql = `SELECT p.lesson_question, p.content, p.id, c.parent_id as parent_id
-//   FROM lessons_content p
-//   LEFT JOIN lessons_title c ON p.cat_slug = c.slug
-//   WHERE c.slug = ?
-//  `;
+router.get("/questions/:parent_id", (req, res, next) => {
+  const parent_id = req.params.parent_id;
+  const sql = `SELECT * FROM questions WHERE parent_id = ? `;
 
-//   conn.query(sql, [slug], (err, results, fields) => {
-//     console.log(results);
-//     res.json(results);
-//   });
-// });
+  conn.query(sql, [parent_id], (err, results, fields) => {
+    console.log("Label", results);
+    res.json(results);
+  });
+});
+
+router.get("/answers/:parent_id", (req, res, next) => {
+  const parent_id = req.params.parent_id;
+  const sql = `SELECT * FROM answers WHERE parent_id = ?`;
+  conn.query(sql, [parent_id], (err, results, fields) => {
+    console.log("Labe2l", results);
+    res.json(results);
+  });
+});
 
 module.exports = router;

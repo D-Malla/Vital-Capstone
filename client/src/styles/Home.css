@@ -11,7 +11,7 @@ html {
 
 /* GENERAL STYLING */
 a {
-  color:white;
+  color: white;
   text-decoration: none;
 }
 
@@ -48,7 +48,7 @@ a:hover {
 /* HOME HEADER STYLING */
 #homeHeaderContainer {
   background: #484848;
-  color:white;
+  color: white;
   display: flex;
   height: 100px;
   top: 0;
@@ -124,7 +124,7 @@ a:hover {
 #homeBodyContainer .greeting {
   left: 390px;
   position: absolute;
-  top: 90px; 
+  top: 90px;
 }
 
 #homeBodyContainer .greeting h1 {
@@ -144,7 +144,7 @@ a:hover {
 }
 
 #homeBodyContainer .classSelectorDiv a:hover {
-  background: rgb(255, 145, 137); 
+  background: rgb(255, 145, 137);
   color: white;
 }
 

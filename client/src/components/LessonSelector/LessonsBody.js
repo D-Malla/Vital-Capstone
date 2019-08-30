@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getLessonTitles, getLessonData} from "../../actions/vital.actions";
+import { getLessonTitles, getLessonData } from "../../actions/vital.actions";
 import { useSelector } from "react-redux";
 import LoadingOverlay from "react-loading-overlay";
 import ReactMarkDown from "react-markdown";
 
 export default props => {
-  const titles = useSelector(appState => appState.get_lessons);
-  const lessonData = useSelector(appState => appState.lesson_data)
+  const titles = useSelector(appState => appState.vitalReducer.get_lessons);
+  const lessonData = useSelector(appState => appState.vitalReducer.lesson_data);
   const [loadState, setLoadState] = useState(true);
+  const lesson_data = useSelector(
+    appState => appState.vitalReducer.lesson_data
+  );
   const id = props.props.match.params.id;
 
   function hideTransition() {
@@ -20,27 +23,27 @@ export default props => {
       setLoadState(false);
     }
   }
-  
+
   function handleSubmit() {
     if (lessonData.id === 1) {
-      props.props.history.push('/lesson/1/5')
+      props.props.history.push("/lesson/1/5");
     } else if (lessonData.id === 2) {
-      props.props.history.push('/lesson/2/18')
+      props.props.history.push("/lesson/2/18");
     } else if (lessonData.id === 3) {
-      props.props.history.push('/lesson/3/31')
+      props.props.history.push("/lesson/3/31");
     }
   }
-  console.log(lessonData, titles)
+  console.log(lessonData, titles);
 
   useEffect(() => {
-    getLessonData(id)
+    getLessonData(id);
     hideTransition();
   }, [id]);
 
   return (
     <div id="lessonsBodyContainer">
       <div className="lessonsBody">
-        <div className='lessonsIntroDiv'>
+        <div className="lessonsIntroDiv">
           <LoadingOverlay
             active={loadState}
             spinner
@@ -55,7 +58,7 @@ export default props => {
             <ReactMarkDown source={lessonData.intro} />
           </LoadingOverlay>
         </div>
-          {/* <Link className='aLink' to="/lesson/1/4">
+        {/* <Link className='aLink' to="/lesson/1/4">
             <button className="link-button">HTML</button>
           </Link>
           <Link className='aLink' to="/lesson/2/17">
@@ -64,7 +67,9 @@ export default props => {
           <Link className='aLink' to="/lesson/3/31">
             <button className="link-button">JAVASCRIPT</button>
           </Link> */}
-            <button onClick={handleSubmit} className="link-button">lets go!</button>
+        <button onClick={handleSubmit} className="link-button">
+          lets go!
+        </button>
         <LoadingOverlay
           active={loadState}
           spinner
@@ -75,8 +80,7 @@ export default props => {
             })
           }}
           fadeSpeed={200}
-        >
-        </LoadingOverlay>
+        ></LoadingOverlay>
       </div>
       {/* <ReactMarkDown source={lesson_data.lesson_description} /> */}
     </div>

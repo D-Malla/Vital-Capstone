@@ -6,6 +6,7 @@ import LessonBody from "./LessonBody";
 import LessonFooter from "./LessonFooter";
 
 export default props => {
+  console.log(props);
   return (
     <div id="lessonContainer">
       <LessonHeader inid={props.match.params.inid} />
