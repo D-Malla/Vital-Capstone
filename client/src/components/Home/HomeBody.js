@@ -20,29 +20,12 @@ export default props => {
         <h1>WELCOME!</h1>
       </div>
       <div className="classSelectorDiv">
-        <Link to="/lesson/1/4" className="link">
-          <div className="classSelector">
-            <h3>HTML</h3>
-            <p>THE BASIC STRUCTURE OF A WEBSITE</p>
-          </div>
-        </Link>
-
-        <Link to="/lesson/2/17" className="link">
-          <div className="classSelector">
-            <h3>CSS</h3>
-            <p>THE PRESENTATION, FORMATTING AND LAYOUT</p>
-          </div>
-        </Link>
-
-        <Link to="/lesson/3/31" className="link">
-          <div className="classSelector">
-            <h3>JAVASCRIPT</h3>
-            <p>THE FUNCTIONALITY AND CONTROL OF ELEMENTS</p>
-          </div>
-        </Link>
-
-        {/* {title.map(item => (
-          <Link to={"/lessons/" + item.lesson + "/" + item.id} className="link">
+        {title.map(item => (
+          <Link
+            key={item.id}
+            to={"/lessons/" + item.lesson + "/" + item.id}
+            className="link"
+          >
             <div key={item.lesson} className="classSelector ">
               <div>
                 <h3> {item.lesson}</h3>
@@ -50,7 +33,7 @@ export default props => {
               </div>
             </div>
           </Link>
-        ))} */}
+        ))}
       </div>
     </div>
   );

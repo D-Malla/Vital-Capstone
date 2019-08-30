@@ -53,12 +53,6 @@ export default props => {
         </a>
       </div>
       <div className="userButtonDiv">
-        <button className="userButtons" type="button">
-          Student
-        </button>
-        <button className="userButtons" type="button">
-          Administrator
-        </button>
       </div>
     </header>
   );

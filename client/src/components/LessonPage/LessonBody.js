@@ -56,24 +56,28 @@ export default props => {
           }}
           fadeSpeed={200}
         >
-          {lessons_list.map(item => (
-            <Link
-              key={item.id}
-              className="lesson-links"
-              to={"/lesson" + "/" + item.parent_id + "/" + item.id}
-            >
-              {item.lesson}
+          <div>
+            {lessons_list.map(item => (
+              <Link
+                key={item.id}
+                className="lesson-links"
+                to={"/lesson" + "/" + item.parent_id + "/" + item.id}
+              >
+                {item.lesson}{" "}
+              </Link>
+            ))}
+          </div>
+          <div className="lessonCourseDiv">
+            <Link className="aLink" to="/lesson/1/4">
+              <button className="link-button">HTML</button>
             </Link>
-          ))}
-          <button className="link-button">
-            <Link to="/lesson/1/4">HTML</Link>
-          </button>
-          <button className="link-button">
-            <Link to="/lesson/2/17">CSS</Link>
-          </button>
-          <button className="link-button">
-            <Link to="/lesson/3/31">JAVASCRIPT</Link>
-          </button>
+            <Link className="aLink" to="/lesson/2/17">
+              <button className="link-button">CSS</button>
+            </Link>
+            <Link className="aLink" to="/lesson/3/31">
+              <button className="link-button">JAVASCRIPT</button>
+            </Link>
+          </div>
         </LoadingOverlay>
       </aside>
 
@@ -98,8 +102,8 @@ export default props => {
           </div>
 
           <div className="lessonButtonDiv">
-            {prev_id > 3 && prev_id !== 16 && prev_id !== 30 ? (
-              <Link to={"/lesson/" + id + "/" + prev_id}>
+            {prev_id > 3 ? (
+              <Link className="aLink" to={"/lesson/" + id + "/" + prev_id}>
                 <button className="link-button" type="button">
                   PREV
                 </button>
@@ -107,28 +111,16 @@ export default props => {
             ) : (
               ""
             )}
-
+            {console.log(next_id)}
             {next_id !== 41 ? (
-              <Link to={"/lesson/" + id + "/" + next_id}>
+              <Link className="aLink" to={"/lesson/" + id + "/" + next_id}>
                 <button className="link-button" type="button">
-                  {prev_id !== 3 && prev_id !== 16 && prev_id !== 30
-                    ? "CONTINUE"
-                    : "LET'S GET STARTED"}
+                  CONTINUE
                 </button>
               </Link>
             ) : (
               ""
             )}
-
-            <Link
-              to={
-                "/quiz/" + lesson_data.parent_id + "/" + lesson_data.parent_id
-              }
-            >
-              <button className="link-button" type="button">
-                Take Quiz
-              </button>
-            </Link>
           </div>
         </LoadingOverlay>
       </div>

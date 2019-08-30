@@ -21,7 +21,7 @@ export default props => {
   return (
     <Provider store={store}>
       <Router>
-        <div>
+        <div id='container'>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/lessons/:slug/:id" component={Lessons} />

@@ -8,7 +8,7 @@ import LessonFooter from "./LessonFooter";
 export default props => {
   console.log(props);
   return (
-    <div id="container">
+    <div id="lessonContainer">
       <LessonHeader inid={props.match.params.inid} />
       <LessonBody id={props.match.params.id} inid={props.match.params.inid} />
       <LessonFooter />

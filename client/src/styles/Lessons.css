@@ -18,8 +18,22 @@ a:visited {
   color: white;
 }
 
+a:hover {
+  color: rgb(255, 145, 137);
+}
+
 .link-button {
-  background-color: black;
+  color: white;
+  font-size: 12px;
+  height: 30px;
+  margin: 0 10px;
+  width: 90px;
+  background: rgb(51, 129, 144);
+  border-radius: 10px;
+}
+
+.link-button:hover {
+  background: rgb(255, 145, 137);
 }
 
 /* LESSONS STYLING */
@@ -50,8 +64,13 @@ a:visited {
 }
 
 #lessonsHeaderContainer .catchphraseDiv {
-  width: 50%;
   text-align: center;
+  width: 50%;
+}
+
+#lessonHeaderContainer .catchphraseDiv h1 {
+  padding-left: 165px;
+  padding-top: 5px;
 }
 
 #lessonsHeaderContainer .userButtonDiv {
@@ -73,7 +92,7 @@ a:visited {
 #lessonsBodyContainer {
   background: white;
   display: flex;
-  height: 500px;
+  min-height: 491px;
 }
 
 #lessonsBodyContainer .lessonsBody {
@@ -83,8 +102,18 @@ a:visited {
   width: 80%;
 }
 
-#lessonsBodyContainer .lessonsBody .indi-lessons {
-  color: black;
+#lessonsBodyContainer .lessonsBody .lessonsIntroDiv {
+  height: 400px;
+  overflow-y: hidden;
+}
+
+#lessonsBodyContainer .lessonsBody .lessonsIntroDiv:hover {
+  overflow-y: scroll;
+}
+
+#lessonsBodyContainer .lessonsBody .link-button {
+  display: block;
+  margin: 20px auto;
 }
 
 #lessonsBodyContainer .lessonsBody .indi-lessons:hover {
