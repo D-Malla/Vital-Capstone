@@ -26,29 +26,23 @@ export default props => {
   return (
     <div>
       <h1>Quiz time</h1>
-      {questions.map(question => (
-        <div>
-          {console.log(question)}
-          {/* <h1>{question.cat_slug + " Quiz"}</h1> */}
-          <h3 key={question.parent_id}>{question.questions}</h3>
-          {console.log("question_check", question.question_id)}
-
-          {answers.map(answer => (
-            <h4 key={answer.id}>
-              <button
-                type="submit"
-                onClick={() => checkAnswer(answer.question_id)}
-              >
-                {answer.answers}
-                {/* {answer.question_id === questions.question_id
-                  ? answer.answers
-                  : ""} */}
-                {console.log("answer_check", answer.question_id)}
-              </button>
-            </h4>
-          ))}
-        </div>
-      ))}
+      {questions.map(item => {
+        return (
+          <div>
+            <h1>{item.questions}</h1>;
+            {answers.map(element => {
+              if (element.question_id === item.question_id) {
+                console.log("match");
+                return (
+                  <button onClick={checkAnswer(element.correct)}>
+                    {element.answers}
+                  </button>
+                );
+              }
+            })}
+          </div>
+        );
+      })}
     </div>
   );
 };
