@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import ReactMarkdown from "react-markdown";
 import LoadingOverlay from "react-loading-overlay";
 
-import { getLessonTitles, getLessonData } from "../../actions/vital.actions";
+import { getLessonTitles, getLessonData, getLessonImage } from "../../actions/vital.actions";
 
 export default props => {
   const lessons_list = useSelector(
@@ -12,6 +12,9 @@ export default props => {
   );
   const lesson_data = useSelector(
     appState => appState.vitalReducer.lesson_data
+  );
+  const lessonImage = useSelector(
+    appState => appState.vitalReducer.lessonImage
   );
 
   // This state is for the transition effect
@@ -37,6 +40,7 @@ export default props => {
   useEffect(() => {
     hideTransition();
     getLessonData(inid);
+    getLessonImage(inid)
   }, [props.id, props.inid]);
   useEffect(() => {
     getLessonTitles(lesson_data.parent_id);
@@ -100,7 +104,12 @@ export default props => {
               <ReactMarkdown source={lesson_data.lesson_description} />
             </article>
           </div>
-
+          {lessonImage.map(item => (
+            <div>
+              <img src={item.image}/>
+            </div>
+          ))}
+          
           <div className="lessonButtonDiv">
             {prev_id > 3 ? (
               <Link className="aLink" to={"/lesson/" + id + "/" + prev_id}>

@@ -7,7 +7,7 @@ import ReactMarkDown from "react-markdown";
 
 export default props => {
   const titles = useSelector(appState => appState.vitalReducer.get_lessons);
-  const lessonData = useSelector(appState => appState.vitalReducer.lesson_data);
+  const lessonData = useSelector(appState => appState.vitalReducer.lesson_data[0]);
   const [loadState, setLoadState] = useState(true);
   const lesson_data = useSelector(
     appState => appState.vitalReducer.lesson_data
