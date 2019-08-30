@@ -4,19 +4,22 @@ import { useSelector } from "react-redux";
 import ReactMarkdown from "react-markdown";
 import LoadingOverlay from "react-loading-overlay";
 
-import {
-  getLessonTitles,
-  getLessonData,
-  matchLessons
-} from "../../actions/vital.actions";
+import { getLessonTitles, getLessonData } from "../../actions/vital.actions";
 
 export default props => {
-  const lessons_list = useSelector(appState => appState.get_lessons);
-  const lesson_data = useSelector(appState => appState.lesson_data);
+  const lessons_list = useSelector(
+    appState => appState.vitalReducer.get_lessons
+  );
+  const lesson_data = useSelector(
+    appState => appState.vitalReducer.lesson_data
+  );
+
+  // This state is for the transition effect
   const [loadState, setLoadState] = useState(true);
+
   let id = props.id;
   const inid = props.inid;
-
+  console.log(id);
   //Grab the numbers and increment or decrement by 1 in order to change pages
   const prev_id = Number(inid) - 1;
   const next_id = Number(inid) + 1;
@@ -30,7 +33,7 @@ export default props => {
       setLoadState(false);
     }
   }
-
+  //This useEffects handle the transition between topics as well as handle the transition overlay
   useEffect(() => {
     hideTransition();
     getLessonData(inid);
@@ -59,7 +62,7 @@ export default props => {
               className="lesson-links"
               to={"/lesson" + "/" + item.parent_id + "/" + item.id}
             >
-              {item.lesson}{" "}
+              {item.lesson}
             </Link>
           ))}
           <button className="link-button">
@@ -75,6 +78,8 @@ export default props => {
       </aside>
 
       <div>
+        {/* The following code adds loading overlay onto the items and renders out both the lesson descriptions and the next and continue buttons */}
+
         <LoadingOverlay
           active={loadState}
           spinner
@@ -93,7 +98,7 @@ export default props => {
           </div>
 
           <div className="lessonButtonDiv">
-            {prev_id > 3 ? (
+            {prev_id > 3 && prev_id !== 16 && prev_id !== 30 ? (
               <Link to={"/lesson/" + id + "/" + prev_id}>
                 <button className="link-button" type="button">
                   PREV
@@ -102,16 +107,28 @@ export default props => {
             ) : (
               ""
             )}
-            {console.log(next_id)}
+
             {next_id !== 41 ? (
               <Link to={"/lesson/" + id + "/" + next_id}>
                 <button className="link-button" type="button">
-                  CONTINUE
+                  {prev_id !== 3 && prev_id !== 16 && prev_id !== 30
+                    ? "CONTINUE"
+                    : "LET'S GET STARTED"}
                 </button>
               </Link>
             ) : (
               ""
             )}
+
+            <Link
+              to={
+                "/quiz/" + lesson_data.parent_id + "/" + lesson_data.parent_id
+              }
+            >
+              <button className="link-button" type="button">
+                Take Quiz
+              </button>
+            </Link>
           </div>
         </LoadingOverlay>
       </div>

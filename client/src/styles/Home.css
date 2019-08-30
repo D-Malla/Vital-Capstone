@@ -11,7 +11,7 @@ html {
 
 /* GENERAL STYLING */
 a {
-  color:white;
+  color: white;
   text-decoration: none;
 }
 
@@ -29,7 +29,7 @@ a:visited {
 /* HOME HEADER STYLING */
 #homeHeaderContainer {
   background: #484848;
-  color:white;
+  color: white;
   display: flex;
   height: 100px;
   position: fixed;
@@ -103,7 +103,7 @@ a:visited {
 #homeBodyContainer .greeting {
   left: 390px;
   position: absolute;
-  top: 210px; 
+  top: 210px;
 }
 
 #homeBodyContainer .greeting h1 {
@@ -123,7 +123,7 @@ a:visited {
 }
 
 #homeBodyContainer .classSelectorDiv a:hover {
-  background: rgb(255, 145, 137); 
+  background: rgb(255, 145, 137);
   color: white;
 }
 

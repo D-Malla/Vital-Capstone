@@ -8,6 +8,7 @@ import ReactMarkDown from "react-markdown";
 export default props => {
   const titles = useSelector(appState => appState.get_lessons);
   const [loadState, setLoadState] = useState(true);
+  const lesson_data = useSelector(appState => appState.lesson_data);
   const id = props.props.match.params.id;
 
   function hideTransition() {
@@ -28,7 +29,7 @@ export default props => {
   return (
     <div id="lessonsBodyContainer">
       <div className="lessonsBody">
-        {titles.map(item => (
+        {/* {titles.map(item => (
           <div key={item.id}>
             <LoadingOverlay
               active={loadState}
@@ -49,7 +50,7 @@ export default props => {
               </Link>
             </LoadingOverlay>
           </div>
-        ))}
+        ))} */}
         <LoadingOverlay
           active={loadState}
           spinner
