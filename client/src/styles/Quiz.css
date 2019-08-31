@@ -1,0 +1,22 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.quiz-wrapper {
+    height: 100%;
+    margin: auto;
+    width: 100%;
+}
+
+.answer-button {
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    margin-bottom: 10px;
+}

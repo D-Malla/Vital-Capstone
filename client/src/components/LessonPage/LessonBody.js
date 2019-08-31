@@ -102,25 +102,54 @@ export default props => {
           </div>
 
           <div className="lessonButtonDiv">
-            {prev_id > 3 ? (
-              <Link className="aLink" to={"/lesson/" + id + "/" + prev_id}>
-                <button className="link-button" type="button">
-                  PREV
-                </button>
-              </Link>
-            ) : (
-              ""
-            )}
-            {console.log(next_id)}
-            {next_id !== 41 ? (
-              <Link className="aLink" to={"/lesson/" + id + "/" + next_id}>
-                <button className="link-button" type="button">
-                  CONTINUE
-                </button>
-              </Link>
-            ) : (
-              ""
-            )}
+            <LoadingOverlay
+              active={loadState}
+              spinner
+              styles={{
+                overlay: base => ({
+                  ...base,
+                  background: "white"
+                })
+              }}
+              fadeSpeed={200}
+            >
+              {prev_id > 3 ? (
+                <Link className="aLink" to={"/lesson/" + id + "/" + prev_id}>
+                  <button className="link-button" type="button">
+                    PREV
+                  </button>
+                </Link>
+              ) : (
+                ""
+              )}
+              {console.log(next_id)}
+              {next_id !== 42 ? (
+                <Link className="aLink" to={"/lesson/" + id + "/" + next_id}>
+                  <button className="link-button" type="button">
+                    CONTINUE
+                  </button>
+                </Link>
+              ) : (
+                ""
+              )}
+              {lesson_data.last_lesson === 1 ? (
+                <Link
+                  className="aLink"
+                  to={
+                    "/quiz/" +
+                    lesson_data.parent_id +
+                    "/" +
+                    lesson_data.parent_id
+                  }
+                >
+                  <button className="link-button" type="button">
+                    Quiz
+                  </button>
+                </Link>
+              ) : (
+                ""
+              )}
+            </LoadingOverlay>
           </div>
         </LoadingOverlay>
       </div>
