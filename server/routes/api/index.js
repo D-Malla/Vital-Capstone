@@ -33,7 +33,7 @@ router.get("/lessons_title/:id", (req, res, next) => {
 router.get("/ind_lesson/:id", (req, res, next) => {
   const id = req.params.id;
   console.log(req.params);
-  const sql = `SELECT l.*, p.*
+  const sql = `SELECT l.*, p.image
   FROM lessons_title l 
   LEFT JOIN pictures p ON p.lesson_id = l.id
   WHERE l.id = ?
