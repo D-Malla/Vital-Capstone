@@ -1,23 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import { getQuestions, getAnswers } from "../../actions/quiz.actions";
 import "../../styles/Quiz.css";
 import QuizHeader from "./QuizHeader";
 import QuizFooter from "./QuizFooter";
+import ReactDOM from "react-dom";
 export default props => {
   const questions = useSelector(appState => appState.quizReducer.questions);
   const answers = useSelector(appState => appState.quizReducer.answers);
 
   const [buttonState, setButtonState] = useState(false);
 
-  // function disableButton() {
-  //   if (clicked === true) {
-  //     setButtonState(true);
-  //   }
-  // }
-
+  let button_item = useRef(null);
+  console.log(button_item);
   useEffect(() => {
-    // disableButton();
     getQuestions(props.match.params.parent_id);
   }, [props.parent_id]);
 
@@ -30,6 +26,7 @@ export default props => {
   console.log("questions", questions);
 
   function checkAnswer(correct) {
+    // console.log(item);
     if (correct === 1) {
       console.log("Smarty Pants");
     } else {
@@ -49,6 +46,7 @@ export default props => {
               if (element.question_id === item.question_id) {
                 return (
                   <button
+                    className="quiz-button"
                     key={element.id}
                     onClick={e => checkAnswer(element.correct)}
                     className="answer-button"
