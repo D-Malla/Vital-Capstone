@@ -20,6 +20,7 @@
     "concurrently": "^4.1.1",
     "react-loading-overlay": "^1.0.1",
     "react-markdown": "^4.1.0",
+    "react-router-redux": "^4.0.8",
     "react-spinners": "^0.6.1",
     "react-syntax-highlighter": "^11.0.2"
   },

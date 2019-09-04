@@ -19,8 +19,21 @@ export function getAnswers(parent_id) {
   });
 }
 export function getCorrectAnswer(correct) {
+  console.log(correct);
   store.dispatch({
     type: "CORRECT_ANSWER",
+    payload: correct
+  });
+}
+export function clearAnswers() {
+  store.dispatch({
+    type: "RESET_APP"
+  });
+}
+
+export function getTotalAnswers(correct) {
+  store.dispatch({
+    type: "TOTAL_ANSWERS",
     payload: correct
   });
 }

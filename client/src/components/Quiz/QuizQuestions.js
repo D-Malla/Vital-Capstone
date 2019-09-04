@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import "../../styles/Quiz.css";
-import { getAnswers, getCorrectAnswer } from "../../actions/quiz.actions";
+import {
+  getAnswers,
+  getCorrectAnswer,
+  getTotalAnswers
+} from "../../actions/quiz.actions";
 
 export default props => {
   const answers = useSelector(appState => appState.quizReducer.answers);
@@ -23,10 +27,11 @@ export default props => {
     setButtonState(!buttonState);
 
     if (correct === 1) {
-      getCorrectAnswer(correct);
-
+      getCorrectAnswer("correct");
+      getTotalAnswers("total");
       console.log("Smarty Pants");
     } else {
+      getTotalAnswers("total");
       console.log("Big Dummy");
     }
   }
@@ -38,6 +43,7 @@ export default props => {
           <button
             onClick={e => checkAnswer(element.correct)}
             disabled={buttonState}
+            key={element.id}
           >
             {element.answers}
           </button>

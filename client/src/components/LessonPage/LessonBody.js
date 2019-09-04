@@ -122,7 +122,7 @@ export default props => {
               ) : (
                 ""
               )}
-              {console.log(next_id)}
+
               {next_id !== 42 ? (
                 <Link className="aLink" to={"/lesson/" + id + "/" + next_id}>
                   <button className="link-button" type="button">
