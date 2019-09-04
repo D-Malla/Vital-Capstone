@@ -18,3 +18,9 @@ export function getAnswers(parent_id) {
     });
   });
 }
+export function getCorrectAnswer(correct) {
+  store.dispatch({
+    type: "CORRECT_ANSWER",
+    payload: correct
+  });
+}

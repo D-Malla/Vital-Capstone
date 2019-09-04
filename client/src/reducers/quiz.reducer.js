@@ -1,6 +1,7 @@
 const initialState = {
   questions: [],
-  answers: []
+  answers: [],
+  correct_answer: []
 };
 
 export default function(state = initialState, action) {
@@ -9,6 +10,11 @@ export default function(state = initialState, action) {
       return { ...state, questions: action.payload };
     case "GET_ANSWERS":
       return { ...state, answers: action.payload };
+    case "CORRECT_ANSWERS":
+      return {
+        ...state,
+        correct_answer: [...state.correct_answer, action.payload]
+      };
     default:
       return state;
   }
