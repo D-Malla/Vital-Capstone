@@ -63,7 +63,7 @@ export default props => {
         ))}
         <div className="finish-wrapper">
           {console.log(total_answers == questions.length)}
-          {correct_answer / questions.length > 0.7 ? (
+          {correct_answer / questions.length >= 0.7 ? (
             <button className="finish-button">
               {console.log(total_answers === questions.length, total_answers)}
               {props.match.params.parent_id == 1 ? (
