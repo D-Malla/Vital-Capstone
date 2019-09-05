@@ -11,7 +11,7 @@ export default props => {
   }, []);
 
   // markdown, markdown renderer use that to store content
-
+  console.log(title);
   return (
     <div id="homeBodyContainer">
       <div className="homeImage"></div>
