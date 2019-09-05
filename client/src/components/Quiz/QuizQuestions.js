@@ -11,6 +11,8 @@ export default props => {
   const answers = useSelector(appState => appState.quizReducer.answers);
 
   const [buttonState, setButtonState] = useState(false);
+  const [correctState, setCorrectState] = useState("hide");
+
   useEffect(() => {
     getAnswers(props.id);
   }, []);
@@ -29,24 +31,40 @@ export default props => {
     if (correct === 1) {
       getCorrectAnswer("correct");
       getTotalAnswers("total");
+      setCorrectState("show");
       console.log("Smarty Pants");
     } else {
+      setCorrectState("show");
       getTotalAnswers("total");
       console.log("Big Dummy");
     }
   }
+
+  function handleClick(correct) {
+    checkAnswer(correct);
+  }
   return (
-    <div>
+    <div className="question-wrapper">
       <h1>{props.props.questions}</h1>
       {answers.map(element =>
         element.question_id === props.props.question_id ? (
-          <button
-            onClick={e => checkAnswer(element.correct)}
-            disabled={buttonState}
-            key={element.id}
-          >
-            {element.answers}
-          </button>
+          <div className="button-wrapper " key={element.id}>
+            {/* this hide the corrct div and then uses state to show the div once it has been clicked */}
+            {element.correct === 1 ? (
+              <div className={correctState}>
+                <span className="correct-box">Correct</span>
+              </div>
+            ) : (
+              ""
+            )}
+            <button
+              onClick={e => handleClick(element.correct)}
+              disabled={buttonState}
+              className="answer-button"
+            >
+              {element.answers}
+            </button>
+          </div>
         ) : (
           ""
         )

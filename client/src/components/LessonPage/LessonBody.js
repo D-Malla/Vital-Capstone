@@ -47,7 +47,6 @@ export default props => {
       <aside className="lessonAside">
         <LoadingOverlay
           active={loadState}
-          spinner
           styles={{
             overlay: base => ({
               ...base,
@@ -86,7 +85,6 @@ export default props => {
 
         <LoadingOverlay
           active={loadState}
-          spinner
           styles={{
             overlay: base => ({
               ...base,
@@ -104,7 +102,6 @@ export default props => {
           <div className="lessonButtonDiv">
             <LoadingOverlay
               active={loadState}
-              spinner
               styles={{
                 overlay: base => ({
                   ...base,
@@ -123,7 +120,7 @@ export default props => {
                 ""
               )}
 
-              {next_id !== 42 ? (
+              {lesson_data.last_lesson !== 1 ? (
                 <Link className="aLink" to={"/lesson/" + id + "/" + next_id}>
                   <button className="link-button" type="button">
                     CONTINUE

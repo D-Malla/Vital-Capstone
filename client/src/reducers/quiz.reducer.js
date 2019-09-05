@@ -24,7 +24,8 @@ export default function(state = initialState, action) {
     case "RESET_APP":
       return {
         ...state,
-        correct_answer: []
+        correct_answer: [],
+        total_answers: []
       };
     default:
       return state;
