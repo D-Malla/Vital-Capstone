@@ -19,15 +19,16 @@ export default props => {
       <h1>First Project-Build a Hobby Page</h1>
       <ul className={hideState}>
         <li>
-          Objective: Build a CodePen.io app that is functionally similar to
-          this:{" "}
-          <Link
-            to="https://codepen.io/freeCodeCamp/full/zNqgVx"
-            className="project-link"
-          >
-            https://codepen.io/freeCodeCamp/full/zNqgVx
-          </Link>
-          .
+          <div className="example-link">
+            Objective: Build a codesandbox.io app that is functionally similar
+            to this:{" "}
+            <a
+              href="https://codesandbox.io/s/example-hobby-site-3b05m"
+              target="_blank"
+            >
+              https://codesandbox.io/s/example-hobby-site-3b05m
+            </a>
+          </div>
         </li>
         <li>
           User Story #1: My tribute page should have an element with a
