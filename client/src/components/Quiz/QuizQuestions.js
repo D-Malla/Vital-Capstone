@@ -49,7 +49,7 @@ export default props => {
       {answers.map(element =>
         element.question_id === props.props.question_id ? (
           <div className="button-wrapper " key={element.id}>
-            {/* this hide the corrct div and then uses state to show the div once it has been clicked */}
+            {/* this hide the correct div and then uses state to show the div once it has been clicked */}
             {element.correct === 1 ? (
               <div className={correctState}>
                 <span className="correct-box">Correct</span>
