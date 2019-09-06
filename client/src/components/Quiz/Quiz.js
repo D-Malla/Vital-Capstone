@@ -69,7 +69,8 @@ export default props => {
               {props.match.params.parent_id == 1 ? (
                 <Link to={"/lesson/" + 2 + "/" + 17}>Next Lesson</Link>
               ) : (
-                <Link to={"/lesson/" + 3 + "/" + 31}>Next Lesson</Link>
+                <Link to={"/projects"}>Projects</Link>
+                // <Link to={"/lesson/" + 3 + "/" + 31}>Next Lesson</Link>
               )}
             </button>
           ) : (

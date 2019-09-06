@@ -53,6 +53,12 @@ export default props => {
         </a>
       </div>
       <div className="userButtonDiv">
+        <Link to="/projects">
+          {" "}
+          <button className="userButtons" type="button">
+            Projects
+          </button>
+        </Link>
       </div>
     </header>
   );
