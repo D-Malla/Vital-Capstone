@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import "normalize.css/normalize.css";
 import "../styles/Home.css";
 import { Provider } from "react-redux";
@@ -11,14 +11,11 @@ import Hobby from "./Projects/Hobby";
 import Home from "./Home/Home";
 import Lessons from "./LessonSelector/Lessons";
 import Lesson from "./LessonPage/Lesson";
+import SignIn from './auth/SignIn'
+import SignUp from './auth/SignUp'
+import { login } from "../actions/auth.actions";
 
-export default props => {
-  const [name, setName] = useState("");
-
-  function handleSubmit(e) {
-    e.preventDefault();
-  }
-
+export default props => {  
   return (
     <Provider store={store}>
       <Router>
@@ -28,6 +25,8 @@ export default props => {
             <Route path="/lessons/:slug/:id" component={Lessons} />
             <Route path="/lesson/:id/:inid" component={Lesson} />
             <Route path="/quiz/:parent_id/:parent_id" component={Quiz} />
+            <Route path='/signin' component={SignIn} />
+            <Route path='/signup' component={SignUp} />
             <Route path="/projects" component={Projects} />
             <Route path="/hobby" component={Hobby} />
           </Switch>

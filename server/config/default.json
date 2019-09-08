@@ -4,5 +4,7 @@
     "user": "root",
     "password": "",
     "database": "vital"
-  }
+  },
+  "salt": "]^g4^]-?D0K[37a",
+  "secret": "h4tEyX&}NC[F xY"
 }
