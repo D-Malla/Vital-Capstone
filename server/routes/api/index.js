@@ -66,6 +66,7 @@ router.get("/lessons_title/", (req, res, next) => {
       });
       cat.subcat = subcat;
     });
+
     res.json(data);
   });
 });
