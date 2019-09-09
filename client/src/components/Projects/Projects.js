@@ -32,6 +32,11 @@ export default props => {
               <Link to="/hobby">Build a Hobby Page </Link>
             </div>
           </li>
+          <li>
+            <div className="project-link">
+              <Link to="/hotel">Style a Hotel Page </Link>
+            </div>
+          </li>
         </ul>
         <form>
           <input type="text"></input>

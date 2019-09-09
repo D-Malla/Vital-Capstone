@@ -38,6 +38,7 @@ router.post('/register', (req, res, next) => {
   const sql = `INSERT INTO users(username, password, first_name, last_name) VALUES (?, ?, ?, ?)`
 
   conn.query(sql, [username, password,first_name, last_name], (err, results, fields) => {
+    console.log(err)
     if (err) {
       res.json ({
         message: 'username already exists',
