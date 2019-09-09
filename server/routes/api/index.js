@@ -1,56 +1,5 @@
 const router = require("express").Router();
 const conn = require("../../db");
-const sha512 = require('js-sha512')
-const jwt = require('jsonwebtoken')
-const config = require('config')
-
-router.post('/login', (req, res, next) => {
-  const username = req.body.username
-  const password = sha512(req.body.password + config.get('salt'))
-  console.log(username, password)
-
-  const sql = `SELECT * FROM users WHERE username = ? AND password = ?`
-
-  conn.query(sql, [username, password], (err, results, fields) => {
-    
-    if (results.length > 0) {
-      const token = jwt.sign({username}, config.get('secret'))
-      
-      res.json({
-        message: 'Signed in',
-        token: token
-      })
-    } else {
-      res.status(401).res.json({
-        message: 'username or password are incorrect'
-      })
-    }
-    console.log(results)
-  })
-})
-
-router.post('/register', (req, res, next) => {
-  const username = req.body.username
-  const password = sha512(req.body.password + config.get('salt'))
-  const first_name = req.body.first_name
-  const last_name = req.body.last_name
-
-  const sql = `INSERT INTO users(username, password, first_name, last_name) VALUES (?, ?, ?, ?)`
-
-  conn.query(sql, [username, password,first_name, last_name], (err, results, fields) => {
-    console.log(err)
-    if (err) {
-      res.json ({
-        message: 'username already exists',
-        user: results
-      })
-    } else {
-      res.json ({
-        message: 'username created'
-      })
-    }
-  })
-})
 
 router.get("/lessons_title/", (req, res, next) => {
   const sql = `SELECT * FROM lessons_title`;
@@ -67,7 +16,6 @@ router.get("/lessons_title/", (req, res, next) => {
       });
       cat.subcat = subcat;
     });
-
     res.json(data);
   });
 });
@@ -85,10 +33,9 @@ router.get("/lessons_title/:id", (req, res, next) => {
 router.get("/ind_lesson/:id", (req, res, next) => {
   const id = req.params.id;
   console.log(req.params);
-  const sql = `SELECT l.*, p.image
-  FROM lessons_title l 
-  LEFT JOIN pictures p ON p.lesson_id = l.id
-  WHERE l.id = ?
+  const sql = `SELECT * 
+  FROM lessons_title
+   WHERE l.id = ?
   `;
 
   conn.query(sql, [id], (err, results, fields) => {
