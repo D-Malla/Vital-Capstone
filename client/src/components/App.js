@@ -1,10 +1,14 @@
+
 import React, { useEffect } from "react";
+
 import "normalize.css/normalize.css";
 import "../styles/Home.css";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import store from "../store";
 import Quiz from "./Quiz/Quiz";
+
+
 import Projects from "./Projects/Projects";
 import Hobby from "./Projects/Hobby";
 
@@ -14,6 +18,7 @@ import Lesson from "./LessonPage/Lesson";
 import SignIn from './auth/SignIn'
 import SignUp from './auth/SignUp'
 import { login } from "../actions/auth.actions";
+
 
 export default props => {  
   return (

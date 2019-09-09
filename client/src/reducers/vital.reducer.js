@@ -2,7 +2,8 @@ const initialState = {
   lessons_title: [],
   lessons: [],
   get_lessons: [],
-  lesson_data: {}
+  lesson_data: {},
+  lessonImage: []
 };
 
 export default function(state = initialState, action) {
@@ -15,6 +16,8 @@ export default function(state = initialState, action) {
       return { ...state, get_lessons: action.payload };
     case "LESSON_DATA":
       return { ...state, lesson_data: action.payload };
+    case "LESSON_IMAGE":
+      return {...state, lessonImage: action.payload}
     default:
       return state;
   }
