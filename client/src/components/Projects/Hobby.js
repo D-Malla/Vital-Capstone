@@ -58,7 +58,7 @@ export default props => {
           subject of the tribute page.
         </li>
         <li>
-          User Story #7: I should see an aelement with a corresponding
+          User Story #7: I should see an element with a corresponding
           id="tribute-link", which links to an outside site that contains
           additional information about the subject of the tribute page. HINT:
           You must give your element an attribute of targetand set it to
