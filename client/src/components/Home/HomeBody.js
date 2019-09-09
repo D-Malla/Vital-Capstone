@@ -5,13 +5,12 @@ import { lessonsTitle } from "../../actions/vital.actions";
 
 export default props => {
   const title = useSelector(appState => appState.vitalReducer.lessons_title);
-  console.log(title);
   useEffect(() => {
     lessonsTitle();
   }, []);
 
   // markdown, markdown renderer use that to store content
-
+  console.log(title);
   return (
     <div id="homeBodyContainer">
       <div className="homeImage"></div>
