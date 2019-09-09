@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { lessonsTitle } from "../../actions/vital.actions";
 
+
 export default props => {
   const title = useSelector(appState => appState.vitalReducer.lessons_title);
   useEffect(() => {
