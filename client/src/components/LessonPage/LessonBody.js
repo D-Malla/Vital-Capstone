@@ -144,15 +144,15 @@ export default props => {
           
           
           <div className="lessonButtonDiv">           
-//             {next_id !== 41 ? (
-//               <Link className="aLink" to={"/lesson/" + id + "/" + next_id}>
-//                 <button className="link-button" type="button">
-//                   CONTINUE
-//                 </button>
-//               </Link>
-//             ) : (
-//               ""
-//             )}
+             {/* {next_id !== 41 ? (
+              <Link className="aLink" to={"/lesson/" + id + "/" + next_id}>
+                <button className="link-button" type="button">
+                  CONTINUE
+                </button>
+              </Link>
+            ) : (
+              ""
+            )} */}
             <LoadingOverlay
               active={loadState}
               styles={{
