@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { getLessonTitles, getLessonData } from "../../actions/vital.actions";
 import { useSelector } from "react-redux";
 import LoadingOverlay from "react-loading-overlay";
