@@ -11,6 +11,7 @@ import Quiz from "./Quiz/Quiz";
 
 import Projects from "./Projects/Projects";
 import Hobby from "./Projects/Hobby";
+import Hotel from "./Projects/Hotel"
 
 import Home from "./Home/Home";
 import Lessons from "./LessonSelector/Lessons";
@@ -34,6 +35,7 @@ export default props => {
             <Route path='/signup' component={SignUp} />
             <Route path="/projects" component={Projects} />
             <Route path="/hobby" component={Hobby} />
+            <Route path="/hotel" component={Hotel} />
           </Switch>
         </div>
       </Router>
