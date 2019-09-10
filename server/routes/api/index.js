@@ -1,5 +1,5 @@
-const router = require("express").Router();
-const conn = require("../../db");
+const router = require('express').Router()
+const conn = require('../../db')
 
 router.get("/lessons_title/", (req, res, next) => {
   const sql = `SELECT * FROM lessons_title`;
@@ -16,7 +16,6 @@ router.get("/lessons_title/", (req, res, next) => {
       });
       cat.subcat = subcat;
     });
-
     res.json(data);
   });
 });
@@ -34,7 +33,9 @@ router.get("/lessons_title/:id", (req, res, next) => {
 router.get("/ind_lesson/:id", (req, res, next) => {
   const id = req.params.id;
   console.log(req.params);
-  const sql = `SELECT * FROM lessons_title WHERE id = ?
+  const sql = `SELECT *
+  FROM lessons_title 
+  WHERE id = ?
   `;
 
   conn.query(sql, [id], (err, results, fields) => {

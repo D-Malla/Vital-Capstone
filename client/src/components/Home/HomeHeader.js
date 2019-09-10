@@ -1,7 +1,10 @@
 import React from 'react'
 import Img from  '../../assets/Vital.png'
+import SignedInLinks from '../HeaderLinks/SignedInLinks'
+import SignedOutLinks from '../HeaderLinks/SignedOutLinks'
 
-export default props => {
+
+export default (props, {message}) => {
   return (
       <header  id='homeHeaderContainer'>
         <div className='logoDiv'>
@@ -9,10 +12,6 @@ export default props => {
         </div>
         <div className='catchphraseDiv'>
           <h1>CODING MADE SIMPLE!</h1>
-        </div>
-        <div className='userButtonDiv'>
-          <button className='userButtons' type='button'>Student</button>
-          <button className='userButtons' type='button'>Administrator</button>
         </div>
       </header>
   )

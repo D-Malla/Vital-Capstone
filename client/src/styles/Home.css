@@ -78,24 +78,54 @@ a:hover {
   font-size: 20px;
 }
 
-#homeHeaderContainer .userButtonDiv {
+#homeHeaderContainer .userLinksDiv {
   display: flex;
-  padding-top: 34px;
+  padding-top: 28px;
   width: 22%;
 }
 
-#homeHeaderContainer .userButtonDiv .userButtons {
-  border-radius: 5px;
-  font-size: 12px;
-  height: 30px;
-  margin-left: 20px;
-  outline: none;
+#homeHeaderContainer .userLinksDiv nav {
+  display: flex;
+  font-size: 14px;
+  /* margin-left: 20px; */
   width: 100px;
 }
 
-#homeHeaderContainer .userButtonDiv .userButtons:hover {
-  background: rgb(255, 145, 137);
-  color: white;
+#homeHeaderContainer .userLinksDiv nav:hover {
+  color: rgb(255, 145, 137);
+}
+
+/* SIGNED IN LINKS STYLING */
+  .signInList {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+
+  .signInList li {
+    margin-left: 10px;
+    margin-right: 10px;
+
+  }
+
+  .signInList li #logout {
+    margin-left: -30px
+  }
+
+  .signInList li #progress {
+    margin-right: 30px
+  }
+
+/* SIGNED OUT LINKS STYLING */
+.signOutList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.signOutList li {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 /* HOME BODY STYLING */

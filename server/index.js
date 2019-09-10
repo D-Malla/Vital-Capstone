@@ -1,14 +1,17 @@
-const express = require("express");
-const app = express();
-const server = require("http").Server(app);
+const express = require('express')
+const app = express()
+const server = require('http').Server(app)
+const io = require('socket.io')(server)
+const config = require('config')
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(express.static("public"));
 
-app.use("/api", require("./routes/api"));
-app.use("/", require("./routes"));
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
+app.use(express.static('public'))
+
+app.use('/api', require('./routes/api'))
+app.use('/', require('./routes'))
 
 server.listen(8000, () => {
-  console.log("Server listening on port 8000");
-});
+  console.log("Server listening on port 8000")
+})

@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import "normalize.css/normalize.css";
 import "../styles/Home.css";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import store from "../store";
+
 import Quiz from "./Quiz/Quiz";
 import Projects from "./Projects/Projects";
 import Hobby from "./Projects/Hobby";
+import Hotel from "./Projects/Hotel";
 
 import Home from "./Home/Home";
 import Lessons from "./LessonSelector/Lessons";
@@ -14,12 +16,6 @@ import Lesson from "./LessonPage/Lesson";
 import JavascriptPrac from "./Projects/JavascriptProject";
 
 export default props => {
-  const [name, setName] = useState("");
-
-  function handleSubmit(e) {
-    e.preventDefault();
-  }
-
   return (
     <Provider store={store}>
       <Router>
@@ -32,6 +28,7 @@ export default props => {
             <Route path="/projects" component={Projects} />
             <Route path="/hobby" component={Hobby} />
             <Route path="/javascriptproject" component={JavascriptPrac} />
+            <Route path="/hotel" component={Hotel} />
           </Switch>
         </div>
       </Router>

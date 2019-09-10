@@ -29,9 +29,19 @@ export function getLessonTitles(id) {
 
 export function getLessonData(id) {
   axios.get("/api/ind_lesson/" + id).then(resp => {
+    console.log("data",resp.data)
     store.dispatch({
       type: "LESSON_DATA",
       payload: resp.data[0]
+    });
+  });
+}
+export function getLessonImage(id) {
+  axios.get("/api/ind_lesson/" + id).then(resp => {
+    console.log("image",resp.data)
+    store.dispatch({
+      type: "LESSON_IMAGE",
+      payload: resp.data
     });
   });
 }
