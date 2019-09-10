@@ -49,6 +49,8 @@ a:hover {
 
 .link-button:hover {
   background: rgb(255, 145, 137);
+  transition: .5s;
+  transform: scale(1.1);
 }
 
 
@@ -100,6 +102,7 @@ a:hover {
   overflow-y: hidden;
   padding: 10px 30px;
   width: 250px;
+
 }
 
 #lessonBodyContainer .lessonAside:hover {
@@ -116,6 +119,8 @@ a:hover {
 
 #lessonBodyContainer .lessonAside .lesson-links:hover {
   color: rgb(255, 145, 137);
+  transition: .5s;
+  transform: scale(1.1);
 }
 
 #lessonBodyContainer .lessonAside .lessonCourseDiv {

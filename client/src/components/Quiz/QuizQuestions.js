@@ -17,14 +17,6 @@ export default props => {
     getAnswers(props.id);
   }, [props.id]);
 
-  // function disableButton(buttonState) {
-  //   if (buttonState === false) {
-  //     setButtonState(true);
-  //   } else {
-  //     setButtonState(false);
-  //   }
-  // }
-
   function checkAnswer(correct) {
     setButtonState(!buttonState);
 
