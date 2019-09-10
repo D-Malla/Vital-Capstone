@@ -36,12 +36,6 @@ a:hover {
   background: rgb(255, 145, 137);
 }
 
-/* LESSONS STYLING */
-#container {
-  display: flex;
-  flex-direction: column;
-}
-
 /* LESSONS HEADER STYLING */
 #lessonsHeaderContainer {
   background:#484848; 
