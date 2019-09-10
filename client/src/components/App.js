@@ -11,6 +11,7 @@ import Hobby from "./Projects/Hobby";
 import Home from "./Home/Home";
 import Lessons from "./LessonSelector/Lessons";
 import Lesson from "./LessonPage/Lesson";
+import JavascriptPrac from "./Projects/JavascriptProject";
 
 export default props => {
   const [name, setName] = useState("");
@@ -30,6 +31,7 @@ export default props => {
             <Route path="/quiz/:parent_id/:parent_id" component={Quiz} />
             <Route path="/projects" component={Projects} />
             <Route path="/hobby" component={Hobby} />
+            <Route path="/javascriptproject" component={JavascriptPrac} />
           </Switch>
         </div>
       </Router>

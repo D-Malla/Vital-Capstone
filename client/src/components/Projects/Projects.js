@@ -24,18 +24,24 @@ export default props => {
           Once you have finished the project, submit your CodeSandbox link below
           in order to receive credit. Click on one of the links below to get
           started, you will be taken to a page describing the project and an
-          instance of CodeSandbox so you can work right in the brower.
+          instance of CodeSandbox so you can work right in the browser.
         </p>
         <ul>
           <li>
             <div className="project-link">
-              <Link to="/hobby">Build a Hobby Page </Link>
+              <Link to="/hobby" className="project-button">
+                Build a Hobby Page{" "}
+              </Link>
             </div>
           </li>
         </ul>
         <form>
           <input type="text"></input>
           <button type="submit">Submit your link</button>
+
+          <Link to={"/lesson/" + 3 + "/" + 31}>
+            <button type="submit">Continue to Javascript</button>
+          </Link>
         </form>
       </div>
       <ProjectFooter />
