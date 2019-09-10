@@ -14,37 +14,45 @@ export default props => {
     }
   }
   return (
-    <div className="description">
+    <div>
       <ProjectHeader />
-      <h1>Third Project-Solve Javascript Functions</h1>
-      <ul className={hideState}>
-        <li>
-          <div className="example-link">
-            Objective: Build a codesandbox.io app that is functionally similar
-            to this:{" "}
-            <a
-              href="https://codesandbox.io/s/example-hobby-site-3b05m"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              https://codesandbox.io/s/example-hobby-site-3b05m
-            </a>
+      <div className="hobby-description">
+        <h1>Third Project-Solve Javascript Functions</h1>
+        <ul className={hideState}>
+          <li>
+            <div className="example-link">
+              Objective: Build a codesandbox.io app that is functionally similar
+              to this:{" "}
+              <a
+                href="https://codesandbox.io/embed/function-practice-hhryf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://codesandbox.io/embed/function-practice-hhryf
+              </a>
+            </div>
+          </li>
+        </ul>
+        <div className="sandbox-wrapper">
+          <div className="sanbox-btn-wrapper">
+            <button onClick={handleClick} className="hide-btn">
+              {hideState === "show"
+                ? "Hide"
+                : hideState === "hide"
+                ? "Show"
+                : ""}
+            </button>
+            <Link to="/projects">
+              <button id="back-to-project">Back to projects</button>
+            </Link>
           </div>
-        </li>
-      </ul>
-      <button onClick={handleClick}>
-        {hideState === "show" ? "Hide" : hideState === "hide" ? "Show" : ""}
-      </button>
-      <Link to="/projects">
-        <button>Back to projects</button>
-      </Link>
-      <div className="sandbox-wrapper">
-        <iframe
-          src="https://codesandbox.io/s/function-practice-hhryf"
-          className="sandbox"
-          // style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-          sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-        ></iframe>
+          <iframe
+            src="https://codesandbox.io/embed/function-practice-hhryf"
+            className="sandbox"
+            // style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+            sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+          ></iframe>
+        </div>
       </div>
       <ProjectFooter />
     </div>
