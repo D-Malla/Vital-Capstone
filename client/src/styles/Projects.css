@@ -82,3 +82,26 @@ ul li {
 .project-button:hover {
     color: rgb(232, 128, 121)
 }
+
+@media screen and (min-width:1300px) {
+    #container {
+        height: 100%;
+    }
+
+    .project-wrapper {
+        height: 50rem
+    }
+
+    .description p {
+        font-size: 30px;
+        line-height: 3rem;
+    }
+
+    .project-link div {
+        border: 1px solid black;
+    }
+
+    .project-link a {
+        font-size: 25px;
+    }
+}

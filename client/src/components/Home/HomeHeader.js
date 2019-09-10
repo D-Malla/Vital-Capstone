@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import React from "react";
 import Img from "../../assets/Vital.png";
-=======
-import React from 'react'
-import Img from  '../../assets/Vital.png'
-
->>>>>>> 4a6c696801a2af7c5920ec3e4f3a39f7d9b97d85
 
 export default (props, { message }) => {
   return (
