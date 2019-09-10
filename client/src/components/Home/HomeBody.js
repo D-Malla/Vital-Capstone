@@ -14,9 +14,7 @@ export default props => {
   console.log(title);
   return (
     <div id="homeBodyContainer">
-      <div className="homeImage"></div>
-      <div className="imgOverlay"></div>
-      <div className="greeting">
+      <div className="homeImage">
         <h1>WELCOME!</h1>
       </div>
       <div className="classSelectorDiv">

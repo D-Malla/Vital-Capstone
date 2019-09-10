@@ -1,7 +1,6 @@
 import React from 'react'
 import Img from  '../../assets/Vital.png'
-import SignedInLinks from '../HeaderLinks/SignedInLinks'
-import SignedOutLinks from '../HeaderLinks/SignedOutLinks'
+
 
 
 export default (props, {message}) => {
