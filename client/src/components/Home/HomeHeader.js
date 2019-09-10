@@ -13,12 +13,6 @@ export default (props, {message}) => {
         <div className='catchphraseDiv'>
           <h1>CODING MADE SIMPLE!</h1>
         </div>
-        <div className='userLinksDiv'>
-          <nav>
-            <SignedOutLinks />
-            <SignedInLinks />
-          </nav>
-        </div>
       </header>
   )
 }

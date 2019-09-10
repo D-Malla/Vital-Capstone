@@ -8,10 +8,9 @@ export default props => {
   const titles = useSelector(appState => appState.vitalReducer.get_lessons);
   const lessonData = useSelector(appState => appState.vitalReducer.lesson_data);
   const [loadState, setLoadState] = useState(true);
-  const lesson_data = useSelector(
-    appState => appState.vitalReducer.lesson_data
-  );
   const id = props.props.match.params.id;
+
+  console.log(lessonData)
 
   function hideTransition() {
     if (loadState === true) {
@@ -57,7 +56,7 @@ export default props => {
             <ReactMarkDown source={lessonData.intro} />
           </LoadingOverlay>
         </div>
-        {/* <Link className='aLink' to="/lesson/1/4">
+        {/* <Link className='aLink' to="/lesson/1/4"> 
             <button className="link-button">HTML</button>
           </Link>
           <Link className='aLink' to="/lesson/2/17">
