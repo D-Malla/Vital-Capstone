@@ -9,16 +9,24 @@ html {
 }
 
 .description {
-    height: 1000px;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.description p {
+    width: 50em;
 }
 
 .project-link a {
     color: black
 }
 
+.project-wrapper {
+    height: 75vh;
+    border: 1px solid black;
+}
+
 .sandbox {
-
-
     width: 95%;
     height: 100%;
     border: 0;
@@ -55,4 +63,45 @@ ul li {
 
 .example-link a:hover {
     color: rgb(232, 128, 121)
+}
+
+.project-link:hover {
+    color: rgb(232, 128, 121)
+}
+
+.project-button {
+    color: white;
+    font-size: 12px;
+    height: 30px;
+    margin: 0 10px;
+    width: 90px;
+    background: rgb(51, 129, 144);
+    border-radius: 10px;
+}
+
+.project-button:hover {
+    color: rgb(232, 128, 121)
+}
+
+@media screen and (min-width:1300px) {
+    #container {
+        height: 100%;
+    }
+
+    .project-wrapper {
+        height: 50rem
+    }
+
+    .description p {
+        font-size: 30px;
+        line-height: 3rem;
+    }
+
+    .project-link div {
+        border: 1px solid black;
+    }
+
+    .project-link a {
+        font-size: 25px;
+    }
 }

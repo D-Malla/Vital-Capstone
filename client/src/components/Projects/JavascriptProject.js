@@ -16,16 +16,20 @@ export default props => {
   return (
     <div className="description">
       <ProjectHeader />
-      <h1>First Project-Build a Hobby Page</h1>
+      <h1>Third Project-Solve Javascript Functions</h1>
       <ul className={hideState}>
         <li>
-          <p>
-            Show us your skills! Style this hotel page in whichever way you'd
-            like. Remember to use all of the concepts you learned throughout the
-            CSS course! We have provided the HTML for your hotel website, so all
-            you need to do is apply your CSS knowledge. Once you feel confident,
-            go ahead and submit your finished product to us! Have fun!
-          </p>
+          <div className="example-link">
+            Objective: Build a codesandbox.io app that is functionally similar
+            to this:{" "}
+            <a
+              href="https://codesandbox.io/s/example-hobby-site-3b05m"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://codesandbox.io/s/example-hobby-site-3b05m
+            </a>
+          </div>
         </li>
       </ul>
       <button onClick={handleClick}>
@@ -36,7 +40,7 @@ export default props => {
       </Link>
       <div className="sandbox-wrapper">
         <iframe
-          src="https://codesandbox.io/s/project-2-bd5zu"
+          src="https://codesandbox.io/s/function-practice-hhryf"
           className="sandbox"
           // style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
           sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
