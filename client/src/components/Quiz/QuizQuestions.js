@@ -24,11 +24,11 @@ export default props => {
       getCorrectAnswer("correct");
       getTotalAnswers("total");
       setCorrectState("show");
-      console.log("Smarty Pants");
+ 
     } else {
       setCorrectState("show");
       getTotalAnswers("total");
-      console.log("Big Dummy");
+
     }
   }
 
