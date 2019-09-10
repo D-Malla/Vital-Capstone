@@ -10,7 +10,7 @@ export default props => {
   const [loadState, setLoadState] = useState(true);
   const id = props.props.match.params.id;
 
-  console.log(lessonData)
+  console.log(lessonData);
 
   function hideTransition() {
     if (loadState === true) {
@@ -28,10 +28,10 @@ export default props => {
     } else if (lessonData.id === 2) {
       props.props.history.push("/lesson/2/18");
     } else if (lessonData.id === 3) {
-      props.props.history.push('/lesson/3/32')
+      props.props.history.push("/lesson/3/32");
     }
   }
-  console.log(lessonData)
+  console.log(lessonData);
 
   useEffect(() => {
     getLessonData(id);
@@ -56,15 +56,7 @@ export default props => {
             <ReactMarkDown source={lessonData.intro} />
           </LoadingOverlay>
         </div>
-        {/* <Link className='aLink' to="/lesson/1/4"> 
-            <button className="link-button">HTML</button>
-          </Link>
-          <Link className='aLink' to="/lesson/2/17">
-            <button className="link-button">CSS</button>
-          </Link>
-          <Link className='aLink' to="/lesson/3/31">
-            <button className="link-button">JAVASCRIPT</button>
-          </Link> */}
+
         <button onClick={handleSubmit} className="link-button">
           lets go!
         </button>
@@ -80,7 +72,6 @@ export default props => {
           fadeSpeed={200}
         ></LoadingOverlay>
       </div>
-      {/* <ReactMarkDown source={lesson_data.lesson_description} /> */}
     </div>
   );
 };

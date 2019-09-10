@@ -9,21 +9,29 @@ html {
 }
 
 .description {
-    height: 1000px;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.description p {
+    width: 50em;
 }
 
 .project-link a {
     color: black
 }
 
+.project-wrapper {
+    height: 75vh;
+    border: 1px solid black;
+}
+
 .sandbox {
-
-
-    width: 95%;
+    width: 100%;
     height: 100%;
     border: 0;
     border-radius: 4px;
-    overflow: hidden;
+    overflow: scroll;
     border: 1px solid black;
 }
 
@@ -55,4 +63,99 @@ ul li {
 
 .example-link a:hover {
     color: rgb(232, 128, 121)
+}
+
+.project-link:hover {
+    color: rgb(232, 128, 121)
+}
+
+.project-button {
+    color: white;
+    font-size: 12px;
+    height: 30px;
+    margin: 0 10px;
+    width: 90px;
+    background: rgb(51, 129, 144);
+    border-radius: 10px;
+}
+
+.project-button:hover {
+    color: rgb(232, 128, 121)
+}
+
+@media screen and (min-width:1300px) {
+    #container {
+        height: 100%;
+    }
+
+    .project-wrapper {
+        height: 50rem;
+
+    }
+
+    .description h1 {
+        padding-left: 1rem;
+    }
+
+    .description p {
+        font-size: 30px;
+        line-height: 3rem;
+        padding-left: 1rem;
+    }
+
+    .project-link div {
+        border: 1px solid black;
+    }
+
+    .project-link a {
+        font-size: 25px;
+
+    }
+
+    .project-button {
+        height: 5rem;
+        width: 10rem;
+
+    }
+
+    form {
+        display: flex;
+        justify-content: center
+    }
+
+    .hobby-description {
+        height: 70rem;
+    }
+
+    .sandbox-wrapper {
+
+        display: flex;
+        height: 100%;
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+
+
+    .sandbox-btn-wrapper {
+        width: 100%;
+        display: flex;
+    }
+
+
+
+    #back-to-project {
+        float: right;
+    }
+
+    .hobby-description button {
+        color: white;
+        font-size: 12px;
+        height: 30px;
+        font-size: 20px;
+        width: 50%;
+        background: rgb(51, 129, 144);
+        border-radius: 0px;
+    }
 }
