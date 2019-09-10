@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "normalize.css/normalize.css";
 import "../styles/Home.css";
 import { Provider } from "react-redux";

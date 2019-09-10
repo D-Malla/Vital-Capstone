@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/Projects.css";
 import ProjectHeader from "./ProjectHeader";
@@ -19,7 +19,13 @@ export default props => {
       <h1>First Project-Build a Hobby Page</h1>
       <ul className={hideState}>
         <li>
-          <p>Show us your skills! Style this hotel page in whichever way you'd like. Remember to use all of the concepts you learned throughout the CSS course! We have provided the HTML for your hotel website, so all you need to do is apply your CSS knowledge. Once you feel confident, go ahead and submit your finished product to us! Have fun!</p>
+          <p>
+            Show us your skills! Style this hotel page in whichever way you'd
+            like. Remember to use all of the concepts you learned throughout the
+            CSS course! We have provided the HTML for your hotel website, so all
+            you need to do is apply your CSS knowledge. Once you feel confident,
+            go ahead and submit your finished product to us! Have fun!
+          </p>
         </li>
       </ul>
       <button onClick={handleClick}>

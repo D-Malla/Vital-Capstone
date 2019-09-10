@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/Projects.css";
 import ProjectHeader from "./ProjectHeader";
@@ -25,6 +25,7 @@ export default props => {
             <a
               href="https://codesandbox.io/s/example-hobby-site-3b05m"
               target="_blank"
+              rel="noopener noreferrer"
             >
               https://codesandbox.io/s/example-hobby-site-3b05m
             </a>
