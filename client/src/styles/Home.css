@@ -45,8 +45,6 @@ a:hover {
 #container {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100vw;
 }
 
 /* HOME HEADER STYLING */
@@ -100,10 +98,6 @@ a:hover {
 }
 
 /* HOME BODY IMAGE STYLING */
-#homeBodyContainer {
-  height: 100vh;
-  width: 100vw;
-}
 
 #homeBodyContainer .homeImage {
   background-image: url('../assets/homebg3.jpg');
@@ -112,13 +106,9 @@ a:hover {
   background-position-x: 0%;
   background-repeat: no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(51, 129, 144, .7);
-  min-height: 200px;
+  min-height: 177px;
   padding-top: 50px;
   text-align: center;
-}
-
-#homeContainer {
-  height: 100%;
 }
 
 #homeBodyContainer .homeImage h1 {
@@ -210,18 +200,24 @@ a:hover {
   width: 30px;
 }
 
-<<<<<<< HEAD
-=======
 @media screen and (min-width:1300px) {
   #container {
     display: flex;
     flex-direction: column;
-    /* height: 100%; */
+    height: 100%;
     width: 100%;
   }
 
+  #homeHeaderContainer .catchphraseDiv {
+    width: 57%;
+  }
+
+  #homeHeaderContainer .catchphraseDiv h1 {
+    font-size: 24px;
+  }
+
   #homeContainer #homeBodyContainer {
-    height: 50rem;
+    height: 48.2rem;
   }
 
   #homeContainer #homeBodyContainer .classSelectorDiv {
@@ -237,12 +233,11 @@ a:hover {
   }
 
   #homeBodyContainer .classSelectorDiv .classSelector h3 {
-    margin-top: 5rem;
+    margin-top: 6rem;
     font-size: 30px;
   }
 
   #homeBodyContainer .homeImage h1 {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 }
->>>>>>> 1b671ec87c08b0809c9b9fe0331b3edd91ec257c

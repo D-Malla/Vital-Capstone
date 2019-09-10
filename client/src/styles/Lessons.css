@@ -107,7 +107,7 @@ a:hover {
 
 #lessonsBodyContainer .lessonsBody .link-button {
   display: block;
-  margin: 20px auto;
+  margin: 35px auto 0 auto;
 }
 
 #lessonsBodyContainer .lessonsBody .indi-lessons:hover {
@@ -155,4 +155,46 @@ a:hover {
   margin-right: 5px;
   margin-top: 15px;
   width: 30px;
+}
+
+@media screen and (min-width:1300px) {
+  #lessonsHeaderContainer .catchphraseDiv {
+    width: 56%;
+  }
+
+  #lessonsBodyContainer {
+    height: 48.2rem;
+  }
+
+  #lessonsBodyContainer .lessonsBody {
+    background: white;
+    color: black;
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  #lessonsBodyContainer .lessonsBody .lessonsIntroDiv {
+    height: 40rem;
+    width: 84rem;
+  }
+
+  .link-button {
+    color: white;
+    font-size: 20px;
+    height: 50px;
+    margin: 0 10px;
+    width: 150px;
+    background: rgb(51, 129, 144);
+    border-radius: 10px;
+  }
+
+  #lessonsBodyContainer .lessonsBody .link-button {
+    display: block;
+    margin: 35px auto 0 auto;
+  }
+
+  ._loading_overlay_wrapper {
+    font-size: 20px;
+  }
+
 }

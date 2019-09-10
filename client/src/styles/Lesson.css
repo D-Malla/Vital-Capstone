@@ -146,15 +146,12 @@ a:hover {
 }
 
 #lessonBodyContainer .lessonButtonDiv {
+  position: absolute;
+  left: 285px;
   display: flex;
   justify-content: center;
   margin-top: 45px;
-  padding-right: 215px;
 }
-
-/*Attempt at picture placement*/
-
-
 
 /* LESSON FOOTER STYLING */
 #lessonFooterContainer {
@@ -197,4 +194,40 @@ a:hover {
   margin-right: 5px;
   margin-top: 15px;
   width: 30px;
+}
+
+@media screen and (min-width:1300px) {
+  #lessonHeaderContainer .catchphraseDiv {
+    width: 56%;
+  }
+
+  #lessonContainer #lessonBodyContainer {
+    height: 48.2rem;
+  }
+
+  #lessonBodyContainer>.lessonAside {
+    height: 48rem;
+    width: 15%;
+  }
+
+  #lessonBodyContainer .lessonAside .lesson-links {
+    font-size: 24px;
+    margin: 21px 0;
+  }
+
+  #lessonBodyContainer .lessonBodyDiv {
+    height: 40rem;
+    width: 100%;
+  }
+
+  #lessonBodyContainer .lessonBodyDiv {
+    height: 40rem;
+    max-width: 1630px;
+  }
+
+  #lessonBodyContainer .lessonButtonDiv {
+    position: absolute;
+    left: 550px;
+  }
+
 }
