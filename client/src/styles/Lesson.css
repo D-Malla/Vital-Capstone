@@ -206,10 +206,6 @@ a:hover {
     width: 57%;
   }
 
-  #lessonHeaderContainer .catchphraseDiv ._loading_overlay_wrapper {
-    display: none;
-  }
-
   #lessonContainer #lessonBodyContainer {
     height: 48.2rem;
   }
