@@ -43,71 +43,73 @@ export default props => {
   return (
     <div className="quiz-wrapper">
       <QuizHeader props={props} />
-      <LoadingOverlay
-        active={loadState}
-        styles={{
-          overlay: base => ({
-            ...base,
-            background: "white"
-          })
-        }}
-        fadeSpeed={200}
-      >
-        {questions.map(item => (
-          <QuizQuestion
-            props={item}
-            questions={questions}
-            id={props.match.params.parent_id}
-            key={item.id}
-          />
-        ))}
-        <div className="finish-wrapper">
-          {console.log(total_answers == questions.length)}
-          {correct_answer / questions.length >= 0.7 ? (
-            <button className="finish-button">
-              {console.log(total_answers === questions.length, total_answers)}
-              {props.match.params.parent_id == 1 ? (
-                <Link to={"/lesson/" + 2 + "/" + 17}>Next Lesson</Link>
-              ) : (
-                <Link to={"/javascriptproject"}>Projects</Link>
-                // <Link to={"/lesson/" + 3 + "/" + 31}>Next Lesson</Link>
-              )}
-            </button>
-          ) : (
-            ""
-          )}
-          {console.log(total_answers)}
-          {total_answers === questions.length &&
-          correct_answer / questions.length < 0.7 ? (
-            <button className="finish-button">
-              {props.match.params.parent_id == 1 &&
-              props.match.params.parent_id !== 2 &&
-              props.match.params.parent_id !== 3 ? (
-                <Link to={"/lesson/" + 1 + "/" + 4}>Review</Link>
-              ) : props.match.params.parent_id == 2 &&
-                props.match.params.parent_id !== 1 &&
+      <div className="inside-wrapper">
+        <LoadingOverlay
+          active={loadState}
+          styles={{
+            overlay: base => ({
+              ...base,
+              background: "white"
+            })
+          }}
+          fadeSpeed={200}
+        >
+          {questions.map(item => (
+            <QuizQuestion
+              props={item}
+              questions={questions}
+              id={props.match.params.parent_id}
+              key={item.id}
+            />
+          ))}
+          <div className="finish-wrapper">
+            {console.log(total_answers == questions.length)}
+            {correct_answer / questions.length >= 0.7 ? (
+              <button className="finish-button">
+                {console.log(total_answers === questions.length, total_answers)}
+                {props.match.params.parent_id == 1 ? (
+                  <Link to={"/lesson/" + 2 + "/" + 17}>Next Lesson</Link>
+                ) : (
+                  <Link to={"/javascriptproject"}>Projects</Link>
+                  // <Link to={"/lesson/" + 3 + "/" + 31}>Next Lesson</Link>
+                )}
+              </button>
+            ) : (
+              ""
+            )}
+            {console.log(total_answers)}
+            {total_answers === questions.length &&
+            correct_answer / questions.length < 0.7 ? (
+              <button className="review-button">
+                {props.match.params.parent_id == 1 &&
+                props.match.params.parent_id !== 2 &&
                 props.match.params.parent_id !== 3 ? (
-                <Link to={"/lesson/" + 2 + "/" + 17}>Review</Link>
-              ) : (
-                <Link to={"/lesson/" + 3 + "/" + 31}>Review</Link>
-              )}
-            </button>
-          ) : (
-            ""
-          )}
+                  <Link to={"/lesson/" + 1 + "/" + 4}>Review</Link>
+                ) : props.match.params.parent_id == 2 &&
+                  props.match.params.parent_id !== 1 &&
+                  props.match.params.parent_id !== 3 ? (
+                  <Link to={"/lesson/" + 2 + "/" + 17}>Review</Link>
+                ) : (
+                  <Link to={"/lesson/" + 3 + "/" + 31}>Review</Link>
+                )}
+              </button>
+            ) : (
+              ""
+            )}
 
-          {total_answers === questions.length ? (
-            <div className="total-correct">
-              {correct_answer}
-              {"/"}
-              {questions.length}
-              {" correct"}
-            </div>
-          ) : (
-            ""
-          )}
-        </div>
-      </LoadingOverlay>
+            {total_answers === questions.length ? (
+              <div className="total-correct">
+                <h2> {correct_answer}</h2>
+                <h2>{"/"}</h2>
+                <h2> {questions.length}</h2>
+                <h2> {" correct"} </h2>
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
+        </LoadingOverlay>
+      </div>
       <QuizFooter />
     </div>
   );
