@@ -42,11 +42,18 @@ export default props => {
                 </Link>
               </div>
             </li>
+            <li>
+              <div className="project-link">
+                <Link to="/javascriptprojects" className="project-link">
+                  Take the Function Challenge{" "}
+                </Link>
+              </div>
+            </li>
           </ul>
           <form>
             <Link to={"/lesson/" + 3 + "/" + 31}>
               <button type="submit" className="project-button">
-                Continue to Javascript
+                Continue to Lessons
               </button>
             </Link>
           </form>
