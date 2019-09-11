@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { lessonsTitle } from "../../actions/vital.actions";
 
-
 export default props => {
   const title = useSelector(appState => appState.vitalReducer.lessons_title);
   useEffect(() => {
@@ -11,7 +10,7 @@ export default props => {
   }, []);
 
   // markdown, markdown renderer use that to store content
-  console.log(title);
+
   return (
     <div id="homeBodyContainer">
       <div className="homeImage">

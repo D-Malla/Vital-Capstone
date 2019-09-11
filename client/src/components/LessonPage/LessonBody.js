@@ -50,10 +50,7 @@ export default props => {
         desc.push(<ReactMarkdown key={item.id} source={item} />);
       }
     });
-  console.log("desc", desc);
-  // const lessonImage = useSelector(
-  //   appState => appState.vitalReducer.lessonImage
-  // );
+
   const [language, setLanguage] = useState("");
   // This state is for the transition effect
   const [loadState, setLoadState] = useState(true);
@@ -128,7 +125,7 @@ export default props => {
         </LoadingOverlay>
       </aside>
 
-      <div>
+      <div className="main-wrapper">
         {/* The following code adds loading overlay onto the items and renders out both the lesson descriptions and the next and continue buttons */}
 
         <LoadingOverlay
@@ -146,15 +143,6 @@ export default props => {
           </div>
 
           <div className="lessonButtonDiv">
-            {/* {next_id !== 41 ? (
-              <Link className="aLink" to={"/lesson/" + id + "/" + next_id}>
-                <button className="link-button" type="button">
-                  CONTINUE
-                </button>
-              </Link>
-            ) : (
-              ""
-            )} */}
             <LoadingOverlay
               active={loadState}
               styles={{
