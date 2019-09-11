@@ -44,7 +44,7 @@ export default props => {
             </li>
             <li>
               <div className="project-link">
-                <Link to="/javascriptprojects" className="project-link">
+                <Link to="/javascriptproject" className="project-link">
                   Take the Function Challenge{" "}
                 </Link>
               </div>
