@@ -128,7 +128,7 @@ export default props => {
         </LoadingOverlay>
       </aside>
 
-      <div>
+      <div className="main-wrapper">
         {/* The following code adds loading overlay onto the items and renders out both the lesson descriptions and the next and continue buttons */}
 
         <LoadingOverlay
@@ -146,15 +146,6 @@ export default props => {
           </div>
 
           <div className="lessonButtonDiv">
-            {/* {next_id !== 41 ? (
-              <Link className="aLink" to={"/lesson/" + id + "/" + next_id}>
-                <button className="link-button" type="button">
-                  CONTINUE
-                </button>
-              </Link>
-            ) : (
-              ""
-            )} */}
             <LoadingOverlay
               active={loadState}
               styles={{
