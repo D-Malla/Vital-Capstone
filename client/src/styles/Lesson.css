@@ -243,6 +243,14 @@ a:hover {
     margin: 21px 0;
   }
 
+  #lessonBodyContainer .lessonButtonDiv {
+    position: sticky;
+    /* left: 500px; */
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+  }
+
   #lessonBodyContainer .lessonBodyDiv {
 
     height: 40rem;

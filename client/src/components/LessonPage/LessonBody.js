@@ -47,7 +47,7 @@ export default props => {
           </SyntaxHighlighter>
         );
       } else {
-        desc.push(<ReactMarkdown key={item.id} source={item} />);
+        desc.push(<ReactMarkdown source={item} />);
       }
     });
 
@@ -65,7 +65,7 @@ export default props => {
     if (loadState === true) {
       setTimeout(function() {
         setLoadState(false);
-      }, 100);
+      }, 500);
     } else {
       setLoadState(false);
     }
