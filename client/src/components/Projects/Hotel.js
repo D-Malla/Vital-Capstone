@@ -14,32 +14,35 @@ export default props => {
     }
   }
   return (
-    <div className="description">
+    <div>
       <ProjectHeader />
-      <h1>First Project-Build a Hobby Page</h1>
-      <ul className={hideState}>
-        <li>
-          <p>
-            Show us your skills! Style this hotel page in whichever way you'd
-            like. Remember to use all of the concepts you learned throughout the
-            CSS course! We have provided the HTML for your hotel website, so all
-            you need to do is apply your CSS knowledge. Once you feel confident,
-            go ahead and submit your finished product to us! Have fun!
-          </p>
-        </li>
-      </ul>
-      <button onClick={handleClick}>
-        {hideState === "show" ? "Hide" : hideState === "hide" ? "Show" : ""}
-      </button>
-      <Link to="/projects">
-        <button>Back to projects</button>
-      </Link>
-      <div className="sandbox-wrapper">
-        <iframe
-          src="https://codesandbox.io/embed/project-2-bd5zu"
-          className="sandbox"
-          sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-        ></iframe>
+      <div className="hobby-description">
+        <h1>First Project-Build a Hobby Page</h1>
+        <ul className={hideState}>
+          <li>
+            <p>
+              Show us your skills! Style this hotel page in whichever way you'd
+              like. Remember to use all of the concepts you learned throughout
+              the CSS course! We have provided the HTML for your hotel website,
+              so all you need to do is apply your CSS knowledge. Once you feel
+              confident, go ahead and submit your finished product to us! Have
+              fun!
+            </p>
+          </li>
+        </ul>
+        <button onClick={handleClick}>
+          {hideState === "show" ? "Hide" : hideState === "hide" ? "Show" : ""}
+        </button>
+        <Link to="/projects">
+          <button>Back to projects</button>
+        </Link>
+        <div className="sandbox-wrapper">
+          <iframe
+            src="https://codesandbox.io/embed/project-2-bd5zu"
+            className="sandbox"
+            sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+          ></iframe>
+        </div>
       </div>
       <ProjectFooter />
     </div>
