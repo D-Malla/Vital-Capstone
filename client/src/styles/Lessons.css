@@ -63,7 +63,7 @@ a:hover {
 }
 
 #lessonHeaderContainer .catchphraseDiv h1 {
-  padding-left: 165px;
+  padding-right: 95px;
   padding-top: 5px;
 }
 
@@ -107,7 +107,7 @@ a:hover {
 
 #lessonsBodyContainer .lessonsBody .link-button {
   display: block;
-  margin: 35px auto 0 auto;
+  margin: 43px auto 0 auto;
 }
 
 #lessonsBodyContainer .lessonsBody .indi-lessons:hover {
@@ -190,7 +190,7 @@ a:hover {
 
   #lessonsBodyContainer .lessonsBody .link-button {
     display: block;
-    margin: 35px auto 0 auto;
+    margin: 75px auto 0 auto;
   }
 
   ._loading_overlay_wrapper {

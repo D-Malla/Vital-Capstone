@@ -157,7 +157,7 @@ a:hover {
 
 #lessonBodyContainer .lessonButtonDiv {
   position: absolute;
-  left: 500px;
+  left: 370px;
   display: flex;
   justify-content: center;
   margin-top: 45px;
@@ -213,8 +213,13 @@ a:hover {
 
   }
 
-  #lessonHeaserContainer .catchphraseDiv p {
+  #lessonHeaderContainer .catchphraseDiv p {
     font-size: 125px;
+  }
+
+  #lessonHeaderContainer .catchphraseDiv ._loading_overlay_wrapper {
+    font-size: 40px;
+    padding-left: 143px;
   }
 
   #root {
@@ -245,10 +250,10 @@ a:hover {
 
   #lessonBodyContainer .lessonButtonDiv {
     position: sticky;
-    /* left: 500px; */
     display: flex;
     justify-content: center;
     margin-top: 45px;
+    padding-right: 345px;
   }
 
   #lessonBodyContainer .lessonBodyDiv {

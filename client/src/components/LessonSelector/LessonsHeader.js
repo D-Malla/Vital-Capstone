@@ -37,7 +37,6 @@ export default props => {
           }}
           fadeSpeed={100}
         >
-          <h1>{lesson}</h1>
         </LoadingOverlay>
       </div>
       <div className="userButtonDiv">
