@@ -41,15 +41,15 @@ export default props => {
             subject of the tribute page (e.g. "Dr. Norman Borlaug").
           </li>
           <li>
-            User Story #3: I should see a divelement with a corresponding
+            User Story #3: I should see a div element with a corresponding
             id="img-div".
           </li>
           <li>
-            User Story #4: Within the img-divelement, I should see an imgelement
-            with a corresponding id="image".
+            User Story #4: Within the img-div element, I should see an img
+            element with a corresponding id="image".
           </li>
           <li>
-            User Story #5: Within the img-divelement, I should see an element
+            User Story #5: Within the img-div element, I should see an element
             with a corresponding id="img-caption"that contains textual content
             describing the image shown in img-div.
           </li>
@@ -62,12 +62,12 @@ export default props => {
             User Story #7: I should see an element with a corresponding
             id="tribute-link", which links to an outside site that contains
             additional information about the subject of the tribute page. HINT:
-            You must give your element an attribute of targetand set it to
-            _blankin order for your link to open in a new tab (i.e.
+            You must give your element an attribute of target and set it to
+            _blank in order for your link to open in a new tab (i.e.
             target="_blank").
           </li>
           <li>
-            User Story #8: The imgelement should responsively resize, relative
+            User Story #8: The img element should responsively resize, relative
             to the width of its parent element, without exceeding its original
             size
           </li>

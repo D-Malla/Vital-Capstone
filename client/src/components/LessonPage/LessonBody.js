@@ -50,10 +50,7 @@ export default props => {
         desc.push(<ReactMarkdown key={item.id} source={item} />);
       }
     });
-  console.log("desc", desc);
-  // const lessonImage = useSelector(
-  //   appState => appState.vitalReducer.lessonImage
-  // );
+
   const [language, setLanguage] = useState("");
   // This state is for the transition effect
   const [loadState, setLoadState] = useState(true);

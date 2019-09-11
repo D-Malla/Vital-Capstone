@@ -5,12 +5,10 @@ import LoadingOverlay from "react-loading-overlay";
 import ReactMarkDown from "react-markdown";
 
 export default props => {
-  const titles = useSelector(appState => appState.vitalReducer.get_lessons);
+  // const titles = useSelector(appState => appState.vitalReducer.get_lessons);
   const lessonData = useSelector(appState => appState.vitalReducer.lesson_data);
   const [loadState, setLoadState] = useState(true);
   const id = props.props.match.params.id;
-
-  console.log(lessonData);
 
   function hideTransition() {
     if (loadState === true) {
