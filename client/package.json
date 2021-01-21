@@ -21,7 +21,7 @@
     "react-scripts": "3.0.1",
     "react-syntax-highlighter": "^11.0.2",
     "redux": "^4.0.4",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.4.0",
     "validator": "^11.1.0"
   },
   "scripts": {
